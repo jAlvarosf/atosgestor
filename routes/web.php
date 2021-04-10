@@ -21,12 +21,20 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/painel', function () {
     return view('painel.index');
 })->name('index');
 
-Route::get('/painel/painel.index', function () {
-    return view('painel.index');
-});
-
 Route::get('/secretaria/secretaria.pessoas', function () {
     return view('secretaria.pessoas');
+});
+
+Route::get('/secretaria/secretaria.index', function () {
+    return view('secretaria.index');
+});
+
+Route::get('/secretaria/secretaria.create-pessoa', function () {
+    return view('secretaria.create-pessoa');
+});
+
+Route::get('/secretaria/secretaria.edit-pessoa', function () {
+    return view('secretaria.edit-pessoa');
 });
 
 Route::get('/financeiro/financeiro.receitas', function () {
