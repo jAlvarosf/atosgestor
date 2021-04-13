@@ -229,11 +229,11 @@ return [
             'search' => true,
             'topnav' => true,
         ],
-        // [
-        //     'text' => 'blog',
-        //     'url'  => 'admin/blog',
-        //     'can'  => 'manage-blog',
-        // ],
+        [
+            'text' => 'blog',
+            'url'  => 'admin/blog',
+            'can'  => 'manage-blog',
+        ],
         [
             'text' => 'Painel',
             'url'  => '/painel',
@@ -258,7 +258,7 @@ return [
             'icon'    => 'fas fa-landmark',
             'submenu' => [
                 [
-                    'icon'    => 'fas fa-file-invoice',
+                    'icon' => 'fas fa-file-invoice',
                     'text' => 'Receitas',
                     'url'  => 'financeiro/financeiro.receitas',
                 ],
