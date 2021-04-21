@@ -17,43 +17,52 @@
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
                   <tr>
+                    <th>Código</th>
                     <th>Nome</th>
+                    <th>CPF</th>
                     <th>Data de nascimento</th>
                     <th>Telefone</th>
-                    <th>Estatus</th>
+                    <th>Status</th>
                     <th>                    
-                        <a class="btn btn-primary btn-sm" href="/secretaria/secretaria.create-pessoa">
+                        <a class="btn btn-primary btn-sm" href="secretaria/create">
                               <i class="fas fa-folder">
                               </i>
-                              View
+                              Criar
                           </a>
                         </th>
                   </tr>
                   </thead>
                   <tbody>
+                  @foreach ($pessoas as $pessoa)
                   <tr>
-                    <td><?= 'Nome'?></td>
-                    <td><?= 'Data de nascimento'?></td>
-                    <td><?= 'Telefone'?></td>
-                    <td><?= 'Estatus'?></td>
+                    <td>{{$pessoa->status}}</td>
+                    <td>{{$pessoa->nome}}</td>
+                    <td>{{$pessoa->codigo}}</td>
+                    <td>{{$pessoa->cpf}}</td>
+                    <td>{{$pessoa->dataNascimento}}</td>
+                    <td>{{$pessoa->telefone}}</td>
+                    
                     <td>        
-                      <a class="btn btn-info btn-sm" href="/secretaria/secretaria.edit-pessoa">
+                      <a class="btn btn-info btn-sm" href="secretaria/edit">
                             <i class="fas fa-pencil-alt">
                             </i>
                         </a>
-                        <a class="btn btn-danger btn-sm" href="/secretaria/deletar-pessoa">
+                        <a class="btn btn-danger btn-sm" href="secretaria/destroy">
                             <i class="fas fa-trash">
                             </i>
                       </a>
                     </td>
                   </tr>
+                  @endforeach
                   </tbody>
                   <tfoot>
                   <tr>
+                    <th>Código</th>
                     <th>Nome</th>
+                    <th>CPF</th>
                     <th>Data de nascimento</th>
                     <th>telefone</th>
-                    <th>Estatus</th>
+                    <th>Status</th>
                     <th></th>
                   </tr>
                   </tfoot>
@@ -74,7 +83,6 @@
 @stop
 
 @section('js')
-<script> console.log('Hi!'); </script>
 <!-- DataTables  & Plugins -->
 <script src="{{asset('vendor/adminlte/plugins/datatables/jquery.dataTables.min.js')}}"></script>
 <script src="{{asset('vendor/adminlte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js')}}"></script>

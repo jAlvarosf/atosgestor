@@ -10,7 +10,7 @@
 <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Editar Pessoa                   
-                      <a class="btn btn-info btn-sm" href="/secretaria/secretaria.index">
+                      <a class="btn btn-info btn-sm" href="/secretaria">
                       <i class="fas fa-angle-double-left"></i>
                             </i>
                         </a>

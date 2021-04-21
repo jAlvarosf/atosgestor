@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\SecretariaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,19 +19,14 @@ Route::get('/', function () {
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/painel', function () {
     return view('painel.index');
-})->name('index');
+})->name('Index');
+
 
 Route::get('/secretaria/secretaria.pessoas', function () {
     return view('secretaria.pessoas');
 });
-
-Route::get('/secretaria/secretaria.index', function () {
-    return view('secretaria.index');
-});
-
-Route::get('/secretaria/secretaria.create-pessoa', function () {
-    return view('secretaria.create-pessoa');
-});
+Route::resource('secretaria', SecretariaController::class);
+// Route::resource('secretaria', 'App\Http\Controllers\SecretariaController');
 
 Route::get('/secretaria/secretaria.edit-pessoa', function () {
     return view('secretaria.edit-pessoa');

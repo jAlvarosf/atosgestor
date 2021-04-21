@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Secretaria;
 use Illuminate\Http\Request;
+use App\Models\Pessoa;
 
 class SecretariaController extends Controller
 {
@@ -14,7 +15,8 @@ class SecretariaController extends Controller
      */
     public function index()
     {
-        return view('secretaria.index');
+        $pessoas=Pessoa::all();
+        return view('secretaria.index')->with('pessoas',$pessoas);
     }
 
     /**
@@ -24,7 +26,7 @@ class SecretariaController extends Controller
      */
     public function create()
     {
-        //
+        return view('secretaria.create-pessoa');
     }
 
     /**
