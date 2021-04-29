@@ -22,8 +22,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/painel', function () {
 })->name('Index');
 
 
-Route::get('/secretaria/secretaria.pessoas', function () {
-    return view('secretaria.pessoas');
+Route::get('/secretaria/secretaria.painel', function () {
+    return view('secretaria.painel');
 });
 Route::resource('secretaria', SecretariaController::class);
 // Route::resource('secretaria', 'App\Http\Controllers\SecretariaController');

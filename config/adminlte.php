@@ -125,9 +125,9 @@ return [
     'classes_content_wrapper' => '',
     'classes_content_header' => '',
     'classes_content' => '',
-    'classes_sidebar' => 'sidebar-dark-primary elevation-5',
+    'classes_sidebar' => 'sidebar-light-primary elevation-5',
     'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-dark navbar-light',
+    'classes_topnav' => 'navbar-light navbar-light',
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 
@@ -167,7 +167,7 @@ return [
 
     'right_sidebar' => false,
     'right_sidebar_icon' => 'fas fa-cogs',
-    'right_sidebar_theme' => 'dark',
+    'right_sidebar_theme' => 'light',
     'right_sidebar_slide' => true,
     'right_sidebar_push' => true,
     'right_sidebar_scrollbar_theme' => 'os-theme-light',
@@ -243,8 +243,8 @@ return [
             'icon'    => 'fas fa-file-invoice',
             'submenu' => [
                 [
-                    'text' => 'Membros',
-                    'url'  => 'secretaria/secretaria.pessoas',
+                    'text' => 'Painel',
+                    'url'  => 'secretaria/secretaria.painel',
                 ],
                 [
                     'text' => 'Lista de Membros',

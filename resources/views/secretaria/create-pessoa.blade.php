@@ -17,21 +17,38 @@
             <div class="col-12">
                 <div class="row">
                     <div class="col-4">
+                        <label for="codigo">Código: *</label>
+                        <input id="codigo" name="codigo" type="text" class=" form-control">
+                    </div>
+                    <div class="col-4">
                         <label for="name">Nome: *</label>
                         <input id="name" name="name" type="text" class=" form-control">
+                    </div>     
+                <!-- phone mask -->
+                <div class="col-4">
+                  <label>Telefone:</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fas fa-phone"></i></span>
                     </div>
+                    <input type="text" class="form-control" data-inputmask='"mask": "(99) 99999-9999"' data-mask>
+                  </div>
+                  </div>
+                  <!-- /.input group -->
+                </>
+                <!-- /.form group -->
                     <div class="col-4">
                         <label for="cpf">CPF: *</label>
                         <input id="cpf" name="cpf" type="text" class=" form-control cpf-inputmask"
                             placeholder="Clique para inserir">
                     </div>
-                    <div class="col-4">
+                    <!-- <div class="col-4">
                         <label>Foto 3x4:</label>
                         <div class="col">
                             <label class="custom-file-label" for="foto">Inserir...</label>
                         </div>
                         <input id="foto" name="foto" type="file" class="custom-file-input">
-                    </div>
+                    </div> -->
                   <div class="col-4">
                   <label>Nascimento:</label>
                     <div class="input-group date" id="reservationdate" data-target-input="nearest">
@@ -41,21 +58,30 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-4">
+                        <label>Sexo: *</label>
+                        <select class="select2 form-control custom-select">
+                            <optgroup label="Sexo">
+                                <option value="M">Masculino</option>
+                                <option value="F">Feminino</option>
+                            </optgroup>
+                        </select>
+                    </div>
                     <div class="col-3">
                         <label for="naturalidade">Naturalidade:</label>
                         <input id="naturalidade" name="naturalidade" type="text" class=" form-control">
                     </div>
-                    <div class="col-4">
+                    <!-- <div class="col-4">
                         <label for="rg">RG:</label>
                         <input id="rg" name="rg" type="text" class=" form-control">
-                    </div>
+                    </div> -->
                     <div class="col-4">
                         <label for="endereco">Endereço:</label>
                         <input id="endereco" name="endereco" type="text" class=" form-control">
                     </div>
                     <div class="col-2">
-                        <label for="numero">Número:</label>
-                        <input id="numero" name="numero" type="text" class=" form-control">
+                        <label for="numerocasa">Número:</label>
+                        <input id="numerocasa" name="numerocasa" type="text" class=" form-control">
                     </div>
                     <div class="col-2">
                         <label for="bairro">Bairro:</label>
@@ -76,15 +102,6 @@
                     <div class="col-2">
                         <label for="uf">UF:</label>
                         <input id="uf" name="uf" type="text" class=" form-control">
-                    </div>
-                    <div class="col-4">
-                        <label>Sexo: *</label>
-                        <select class="select2 form-control custom-select">
-                            <optgroup label="Sexo">
-                                <option value="M">Masculino</option>
-                                <option value="F">Feminino</option>
-                            </optgroup>
-                        </select>
                     </div>
                     <div class="col-4">
                         <label>Estado Cívil:</label>
@@ -140,10 +157,12 @@
         <script src="{{asset('vendor/adminlte/dist/js/demo.js')}}"></script>
         <!-- InputMask -->
         <script src="{{asset('vendor/adminlte/plugins/moment/moment.min.js')}}"></script>
+        <script src="{{asset('vendor/adminlte/plugins/inputmask/jquery.inputmask.min.js')}}"></script>
         <!-- date-range-picker -->
         <script src="{{asset('vendor/adminlte/plugins/daterangepicker/daterangepicker.js')}}"></script>
         <!-- Tempusdominus Bootstrap 4 -->
         <script src="{{asset('vendor/adminlte/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}"></script>
+            
         <script>
         $(function() {
             bsCustomFileInput.init();
