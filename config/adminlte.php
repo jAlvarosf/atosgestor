@@ -125,7 +125,7 @@ return [
     'classes_content_wrapper' => '',
     'classes_content_header' => '',
     'classes_content' => '',
-    'classes_sidebar' => 'sidebar-light-primary elevation-5',
+    'classes_sidebar' => 'sidebar-light-primary elevation-3',
     'classes_sidebar_nav' => '',
     'classes_topnav' => 'navbar-light navbar-light',
     'classes_topnav_nav' => 'navbar-expand',
