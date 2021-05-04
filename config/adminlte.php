@@ -234,7 +234,7 @@ return [
             'can'  => 'manage-blog',
         ],
         [
-            'text' => 'Painel',
+            'text' => 'Painel Geral',
             'url'  => '/painel',
             'icon' => 'fas fa-home',
         ],

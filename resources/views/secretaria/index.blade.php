@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-<!-- /.content -->
+
 <div class="card">
   <div class="card-header">
     <h3 class="card-title">Lista de Cadastrados</h3>
@@ -26,9 +26,7 @@
         <tr>
           <th>Código</th>
           <th>Nome</th>
-          <th>CPF</th>
-          <th>Data de nascimento</th>
-          <th>Telefone</th>
+          <th>Nascido</th>
           <th>Status</th>
         </tr>
       </thead>
@@ -38,10 +36,7 @@
           <td>{{$pessoa->status}}</td>
           <td>{{$pessoa->nome}}</td>
           <td>{{$pessoa->codigo}}</td>
-          <td>{{$pessoa->cpf}}</td>
           <td>{{$pessoa->dataNascimento}}</td>
-          <td>{{$pessoa->telefone}}</td>
-
           <td>
             <a class="btn btn-info btn-sm" href="secretaria/edit">
               <i class="fas fa-pencil-alt">
@@ -60,8 +55,6 @@
   <!-- /.card-body -->
 </div>
 <!-- /.card -->
-</div>
-<!-- /.col -->
 @stop
 
 @section('css')
@@ -75,14 +68,12 @@
 <!-- DataTables  & Plugins -->
 <script src="{{asset('vendor/adminlte/plugins/datatables/jquery.dataTables.min.js')}}"></script>
 <script src="{{asset('vendor/adminlte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
-<script src="{{asset('vendor/adminlte/plugins/datatables-responsive/js/dataTables.responsive.min.js')}}"></script>
 <script src="{{asset('vendor/adminlte/plugins/datatables-responsive/js/responsive.bootstrap4.min.js')}}"></script>
 <script src="{{asset('vendor/adminlte/plugins/datatables-buttons/js/dataTables.buttons.min.js')}}"></script>
 <script src="{{asset('vendor/adminlte/plugins/datatables-buttons/js/buttons.bootstrap4.min.js')}}"></script>
 <script src="{{asset('vendor/adminlte/plugins/pdfmake/pdfmake.min.js')}}"></script>
 <script src="{{asset('vendor/adminlte/plugins/pdfmake/vfs_fonts.js')}}"></script>
 <script src="{{asset('vendor/adminlte/plugins/datatables-buttons/js/buttons.html5.min.js')}}"></script>
-<script src="{{asset('vendor/adminlte/plugins/datatables-buttons/js/buttons.print.min.js')}}"></script>
 <script src="{{asset('vendor/adminlte/plugins/datatables-buttons/js/buttons.colVis.min.js')}}"></script>
 <!-- AdminLTE App -->
 <!-- Page specific script -->

@@ -23,24 +23,23 @@
                     <div class="col-4">
                         <label for="name">Nome: *</label>
                         <input id="name" name="name" type="text" class=" form-control">
-                    </div>     
-                <!-- phone mask -->
-                <div class="col-4">
-                  <label>Telefone:</label>
-                  <div class="input-group">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="fas fa-phone"></i></span>
                     </div>
-                    <input type="text" class="form-control" data-inputmask='"mask": "(99) 99999-9999"' data-mask>
-                  </div>
-                  </div>
-                  <!-- /.input group -->
-                </>
-                <!-- /.form group -->
+                    <!-- phone mask -->
+                    <div class="col-4">
+                        <label>Telefone:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                            </div>
+                            <input type="text" class="form-control" data-inputmask='"mask": "(99) 99999-9999"' data-mask>
+                        </div>
+                    </div>
+                    <!-- /.input group -->
+                    </>
+                    <!-- /.form group -->
                     <div class="col-4">
                         <label for="cpf">CPF: *</label>
-                        <input id="cpf" name="cpf" type="text" class=" form-control cpf-inputmask"
-                            placeholder="Clique para inserir">
+                        <input id="cpf" name="cpf" type="text" class=" form-control cpf-inputmask" placeholder="Clique para inserir">
                     </div>
                     <!-- <div class="col-4">
                         <label>Foto 3x4:</label>
@@ -49,16 +48,16 @@
                         </div>
                         <input id="foto" name="foto" type="file" class="custom-file-input">
                     </div> -->
-                  <div class="col-4">
-                  <label>Nascimento:</label>
-                    <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                        <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate"/>
-                        <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
-                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                    <div class="col-4">
+                        <label>Nascimento:</label>
+                        <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate" />
+                            <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-4">
+                    <div class="col-4">
                         <label>Sexo: *</label>
                         <select class="select2 form-control custom-select">
                             <optgroup label="Sexo">
@@ -115,7 +114,7 @@
                     </div>
                 </div>
                 <div class="row">
-                <div class="col">
+                    <div class="col">
                         <label for="cono1">Observações:</label>
                         <div class="col-sm-5">
                             <textarea class="form-control"></textarea>
@@ -127,51 +126,43 @@
                     <a href="/secretaria" class="btn btn-secondary">cancelar</a>
                 </div>
         </form>
-        @stop
+    </div>
+</div>
 
-        @section('css')
-        <link rel="stylesheet" href="/css/admin_custom.css">
-        <!-- Google Font: Source Sans Pro -->
-        <link rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="{{asset('vendor/adminlte/plugins/fontawesome-free/css/all.min.css')}}">
-        <!-- Theme style -->
-        <link rel="stylesheet" href="{{asset('vendor/adminlte/dist/css/adminlte.min.css')}}">
-          <!-- daterange picker -->
-        <link rel="stylesheet" href="{{asset('vendor/adminlte/plugins/daterangepicker/daterangepicker.css')}}">
-        <!-- Tempusdominus Bootstrap 4 -->
-        <link rel="stylesheet" href="{{asset('vendor/adminlte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')}}">
-        @stop
+@stop
 
-        @section('js')
-        <!-- jQuery -->
-        <script src="{{asset('vendor/adminlte/plugins/jquery/jquery.min.js')}}"></script>
-        <!-- Bootstrap 4 -->
-        <script src="{{asset('vendor/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-        <!-- bs-custom-file-input -->
-        <script src="{{asset('vendor/adminlte/plugins/bs-custom-file-input/bs-custom-file-input.min.js')}}"></script>
-        <!-- AdminLTE App -->
-        <script src="{{asset('vendor/adminlte/dist/js/adminlte.min.js')}}"></script>
-        <!-- AdminLTE for demo purposes -->
-        <script src="{{asset('vendor/adminlte/dist/js/demo.js')}}"></script>
-        <!-- InputMask -->
-        <script src="{{asset('vendor/adminlte/plugins/moment/moment.min.js')}}"></script>
-        <script src="{{asset('vendor/adminlte/plugins/inputmask/jquery.inputmask.min.js')}}"></script>
-        <!-- date-range-picker -->
-        <script src="{{asset('vendor/adminlte/plugins/daterangepicker/daterangepicker.js')}}"></script>
-        <!-- Tempusdominus Bootstrap 4 -->
-        <script src="{{asset('vendor/adminlte/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}"></script>
-            
-        <script>
-        $(function() {
-            bsCustomFileInput.init();
-        });
-          //Date picker
-        $('#reservationdate').datetimepicker({
-            format: 'L'
-        });
-        $('#reservation').daterangepicker()
-        </script>
-        
-        @stop
+@section('css')
+<link rel="stylesheet" href="/css/admin_custom.css">
+<!-- Google Font: Source Sans Pro -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="{{asset('vendor/adminlte/plugins/fontawesome-free/css/all.min.css')}}">
+<!-- daterange picker -->
+<link rel="stylesheet" href="{{asset('vendor/adminlte/plugins/daterangepicker/daterangepicker.css')}}">
+<!-- Tempusdominus Bootstrap 4 -->
+<link rel="stylesheet" href="{{asset('vendor/adminlte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')}}">
+@stop
+
+@section('js')
+<!-- jQuery -->
+<script src="{{asset('vendor/adminlte/plugins/jquery/jquery.min.js')}}"></script>
+<!-- InputMask -->
+<script src="{{asset('vendor/adminlte/plugins/moment/moment.min.js')}}"></script>
+<script src="{{asset('vendor/adminlte/plugins/inputmask/jquery.inputmask.min.js')}}"></script>
+<!-- date-range-picker -->
+<script src="{{asset('vendor/adminlte/plugins/daterangepicker/daterangepicker.js')}}"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="{{asset('vendor/adminlte/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}"></script>
+
+<script>
+    $(function() {
+        bsCustomFileInput.init();
+    });
+    //Date picker
+    $('#reservationdate').datetimepicker({
+        format: 'L'
+    });
+    $('#reservation').daterangepicker()
+</script>
+
+@stop
