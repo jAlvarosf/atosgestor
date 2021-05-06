@@ -19,7 +19,7 @@ class CreatePessoasTable extends Migration
 
             $table->integer('codigo');
             $table->string('nome');
-            $table->unique('CPF');
+            $table->unique('cpf');
             $table->integer('data-nascimento');
             $table->string('sexo');
             $table->string('endereco');
