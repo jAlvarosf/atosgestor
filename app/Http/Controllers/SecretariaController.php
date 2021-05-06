@@ -59,7 +59,7 @@ class SecretariaController extends Controller
      */
     public function edit(Secretaria $secretaria)
     {
-        //
+        return view('secretaria.create-pessoa');
     }
 
     /**

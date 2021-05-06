@@ -17,7 +17,6 @@ class CreatePessoasTable extends Migration
 
             $table->id();
 
-            $table->integer('codigo');
             $table->string('nome');
             $table->string('cpf');
             $table->integer('data-nascimento');
@@ -33,6 +32,7 @@ class CreatePessoasTable extends Migration
             $table->string('observacoes');
             $table->integer('telefone');
             $table->string('status');
+            
             $table->softDeletes();
             $table->timestamps();
         });

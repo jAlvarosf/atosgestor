@@ -13,13 +13,10 @@
         <div class="card-header">
             <h3 class="card-title">Novo Membro</h3>
         </div>
-        <form id="cadastro" action="/pessoas" method="post">
+        <form name="cadastroFor" id="cadastro" action="/pessoas" method="post">
+        @csrf
             <div class="col-12">
                 <div class="row">
-                    <div class="col-4">
-                        <label for="codigo">Código: *</label>
-                        <input id="codigo" name="codigo" type="text" class=" form-control">
-                    </div>
                     <div class="col-4">
                         <label for="name">Nome: *</label>
                         <input id="name" name="name" type="text" class=" form-control">
@@ -106,9 +103,18 @@
                         <label>Estado Cívil:</label>
                         <select class="select2 form-control custom-select">
                             <optgroup label="Estado Cívil">
-                                <option value="M">Solteiro</option>
-                                <option value="F">Casado</option>
-                                <option value="F">Divorciado</option>
+                                <option value="solteiro">Solteiro</option>
+                                <option value="casado">Casado</option>
+                                <option value="divorciado">Divorciado</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="col-4">
+                        <label>Estado do membro:</label>
+                        <select class="select2 form-control custom-select">
+                            <optgroup label="Estado_mem">
+                                <option value="ativo">Ativo</option>
+                                <option value="inativo">Inativo</option>
                             </optgroup>
                         </select>
                     </div>
@@ -122,8 +128,8 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    <a href="/secretaria" class="btn btn-secondary">cancelar</a>
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                    <a href="/secretaria" class="btn btn-secondary">Voltar</a>
                 </div>
         </form>
     </div>

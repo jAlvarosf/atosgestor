@@ -21,7 +21,7 @@
   </div>
   <!-- /.card-header -->
   <div class="card-body">
-    <table id="example1" class="table table-bordered table-striped">
+    <table id="pessoas" class="table table-bordered table-striped">
       <thead>
         <tr>
           <th>Código</th>
@@ -33,10 +33,10 @@
       <tbody>
         @foreach ($pessoas as $pessoa)
         <tr>
-          <td>{{$pessoa->status}}</td>
-          <td>{{$pessoa->nome}}</td>
           <td>{{$pessoa->codigo}}</td>
+          <td>{{$pessoa->nome}}</td>
           <td>{{$pessoa->dataNascimento}}</td>
+          <td>{{$pessoa->status}}</td>
           <td>
             <a class="btn btn-info btn-sm" href="secretaria/edit">
               <i class="fas fa-pencil-alt">
@@ -79,12 +79,12 @@
 <!-- Page specific script -->
 <script>
   $(function() {
-    $("#example1").DataTable({
+    $("#pessoas").DataTable({
       "responsive": true,
       "lengthChange": false,
       "autoWidth": true,
       "buttons": ["pdf", "colvis"]
-    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    }).buttons().container().appendTo('#pessoas_wrapper .col-md-6:eq(0)');
   });
 </script>
 @stop
