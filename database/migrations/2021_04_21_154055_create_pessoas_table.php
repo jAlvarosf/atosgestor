@@ -18,20 +18,21 @@ class CreatePessoasTable extends Migration
             $table->id();
 
             $table->string('nome');
-            $table->string('cpf');
-            $table->integer('data-nascimento');
+            $table->integer('telefone');
+            $table->integer('cpf');
+            $table->string('dataNascimento');
             $table->string('sexo');
+            $table->string('naturalidade');
             $table->string('endereco');
-            $table->integer('numero-casa');
+            $table->integer('numeroCasa');
             $table->string('bairro');
             $table->string('complemento');
             $table->string('cidade');
             $table->integer('cep');
             $table->string('uf');
-            $table->string('estado-civil');
+            $table->string('estadocivil');
             $table->string('observacoes');
-            $table->integer('telefone');
-            $table->string('status');
+            $table->string('estadoMem');
             
             $table->softDeletes();
             $table->timestamps();

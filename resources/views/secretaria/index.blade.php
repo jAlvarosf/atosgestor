@@ -7,7 +7,6 @@
 @stop
 
 @section('content')
-
 <div class="card">
   <div class="card-header">
     <h3 class="card-title">Lista de Cadastrados</h3>
@@ -28,15 +27,16 @@
           <th>Nome</th>
           <th>Nascido</th>
           <th>Status</th>
+          <th>Ações</th>
         </tr>
       </thead>
       <tbody>
         @foreach ($pessoas as $pessoa)
         <tr>
-          <td>{{$pessoa->codigo}}</td>
+          <td>{{$pessoa->id}}</td>
           <td>{{$pessoa->nome}}</td>
           <td>{{$pessoa->dataNascimento}}</td>
-          <td>{{$pessoa->status}}</td>
+          <td>{{$pessoa->estadoMem}}</td>
           <td>
             <a class="btn btn-info btn-sm" href="secretaria/edit">
               <i class="fas fa-pencil-alt">

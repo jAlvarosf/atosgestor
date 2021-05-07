@@ -13,13 +13,13 @@
         <div class="card-header">
             <h3 class="card-title">Novo Membro</h3>
         </div>
-        <form name="cadastroFor" id="cadastro" action="/pessoas" method="post">
+        <form name="cadastroFor" id="cadastro" action="/secretaria" method="post">
         @csrf
             <div class="col-12">
                 <div class="row">
                     <div class="col-4">
-                        <label for="name">Nome: *</label>
-                        <input id="name" name="name" type="text" class=" form-control">
+                        <label for="nome">Nome: *</label>
+                        <input id="nome" name="nome" type="text" class=" form-control">
                     </div>
                     <!-- phone mask -->
                     <div class="col-4">
@@ -28,7 +28,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-phone"></i></span>
                             </div>
-                            <input type="text" class="form-control" data-inputmask='"mask": "(99) 99999-9999"' data-mask>
+                            <input name="telefone" type="text" class="form-control" data-inputmask='"mask": "(99) 99999-9999"' data-mask>
                         </div>
                     </div>
                     <!-- /.input group -->
@@ -48,7 +48,7 @@
                     <div class="col-4">
                         <label>Nascimento:</label>
                         <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                            <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate" />
+                            <input name="dataNascimento" type="text" class="form-control datetimepicker-input" data-target="#reservationdate" />
                             <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
                                 <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                             </div>
@@ -57,7 +57,7 @@
                     <div class="col-4">
                         <label>Sexo: *</label>
                         <select class="select2 form-control custom-select">
-                            <optgroup label="Sexo">
+                            <optgroup label="sexo">
                                 <option value="M">Masculino</option>
                                 <option value="F">Feminino</option>
                             </optgroup>
@@ -77,7 +77,7 @@
                     </div>
                     <div class="col-2">
                         <label for="numerocasa">Número:</label>
-                        <input id="numerocasa" name="numerocasa" type="text" class=" form-control">
+                        <input id="numerocasa" name="numeroCasa" type="text" class=" form-control">
                     </div>
                     <div class="col-2">
                         <label for="bairro">Bairro:</label>
@@ -101,8 +101,8 @@
                     </div>
                     <div class="col-4">
                         <label>Estado Cívil:</label>
-                        <select class="select2 form-control custom-select">
-                            <optgroup label="Estado Cívil">
+                        <select name="estadocivil" class="select2 form-control custom-select">
+                            <optgroup label="estadocivil">
                                 <option value="solteiro">Solteiro</option>
                                 <option value="casado">Casado</option>
                                 <option value="divorciado">Divorciado</option>
@@ -111,8 +111,8 @@
                     </div>
                     <div class="col-4">
                         <label>Estado do membro:</label>
-                        <select class="select2 form-control custom-select">
-                            <optgroup label="Estado_mem">
+                        <select name="estadoMem" class="select2 form-control custom-select">
+                            <optgroup label="estadoMem">
                                 <option value="ativo">Ativo</option>
                                 <option value="inativo">Inativo</option>
                             </optgroup>
@@ -122,14 +122,14 @@
                 <div class="row">
                     <div class="col">
                         <label for="cono1">Observações:</label>
-                        <div class="col-sm-5">
+                        <div name="observacoes" class="col-sm-5">
                             <textarea class="form-control"></textarea>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
                     <button type="submit" class="btn btn-primary">Salvar</button>
-                    <a href="/secretaria" class="btn btn-secondary">Voltar</a>
+                    <a href="/secretaria" class="btn btn-secondary">Cancelar</a>
                 </div>
         </form>
     </div>

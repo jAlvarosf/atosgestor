@@ -37,7 +37,29 @@ class SecretariaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $pessoas = new Pessoa();
+
+        $pessoas->nome = $request->get('nome');
+        $pessoas->telefone = $request->get('telefone');       
+        $pessoas->cpf = $request->get('cpf');
+        $pessoas->dataNascimento = $request->get('dataNascimento');
+        $pessoas->sexo = $request->get('sexo');
+        $pessoas->naturalidade = $request->get('naturalidade');
+        $pessoas->endereco = $request->get('endereco');
+        $pessoas->numeroCasa = $request->get('numeroCasa');
+        $pessoas->bairro = $request->get('bairro');
+        $pessoas->complemento = $request->get('complemento');
+        $pessoas->cidade = $request->get('cidade');
+        $pessoas->cep = $request->get('cep');
+        $pessoas->uf = $request->get('uf');
+        $pessoas->estadocivil = $request->get('estadocivil');
+        $pessoas->observacoes = $request->get('observacoes');
+        $pessoas->estadoMem = $request->get('estadoMem');
+
+        $pessoas->save();
+
+        return redirect('/secretaria');
+
     }
 
     /**
