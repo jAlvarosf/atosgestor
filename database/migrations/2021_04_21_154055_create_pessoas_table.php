@@ -17,26 +17,27 @@ class CreatePessoasTable extends Migration
 
             $table->id();
 
-            $table->string('nome');
-            $table->integer('telefone');
-            $table->integer('cpf');
-            $table->string('dataNascimento');
-            $table->string('sexo');
-            $table->string('naturalidade');
-            $table->string('endereco');
-            $table->integer('numeroCasa');
-            $table->string('bairro');
-            $table->string('complemento');
-            $table->string('cidade');
-            $table->integer('cep');
-            $table->string('uf');
-            $table->string('estadocivil');
-            $table->string('observacoes');
-            $table->string('estadoMem');
+            $table->string('nome', 255)->nullable();
+            $table->string('telefone', 22)->nullable()->default(0.00);
+            $table->string('cpf', 22)->nullable()->default(0.00);
+            $table->string('dataNascimento', 22)->nullable()->default(0.00);
+            $table->string('sexo', 10)->nullable()->default(0.00);
+            $table->string('naturalidade', 22)->nullable();
+            $table->string('endereco', 255)->nullable();
+            $table->string('numeroCasa', 22)->nullable();
+            $table->string('bairro', 22)->nullable();
+            $table->string('complemento', 255)->nullable();
+            $table->string('cidade', 255)->nullable();
+            $table->string('cep', 22)->nullable();
+            $table->string('uf', 22)->nullable();
+            $table->string('estadocivil', 22)->nullable();
+            $table->string('observacoes', 22)->nullable();
+            $table->string('estadoMem', 22)->nullable();
             
             $table->softDeletes();
-            $table->timestamps();
-        });
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->nullable(); 
+       });
     }
     
     /**

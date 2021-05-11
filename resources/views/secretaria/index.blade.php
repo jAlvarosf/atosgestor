@@ -38,14 +38,20 @@
           <td>{{$pessoa->dataNascimento}}</td>
           <td>{{$pessoa->estadoMem}}</td>
           <td>
-            <a class="btn btn-info btn-sm" href="secretaria/edit">
-              <i class="fas fa-pencil-alt">
-              </i>
-            </a>
-            <a class="btn btn-danger btn-sm" href="secretaria/destroy">
-              <i class="fas fa-trash">
-              </i>
-            </a>
+            <form action="{{ route('secretaria.destroy', $pessoa->id) }}" method="POST">
+
+              <a  class="btn btn-info btn-sm" href="{{ route('secretaria.edit', $pessoa->id) }}">
+                <i class="fas fa-pencil-alt"></i>
+              </a>
+
+              @csrf
+              @method('DELETE')
+
+              <button type="submit" title="delete" class="btn btn-danger btn-sm">
+                <i class="fas fa-trash"></i>
+
+              </button>
+            </form>
           </td>
         </tr>
         @endforeach

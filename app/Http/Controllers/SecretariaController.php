@@ -15,8 +15,8 @@ class SecretariaController extends Controller
      */
     public function index()
     {
-        $pessoas=Pessoa::all();
-        return view('secretaria.index')->with('pessoas',$pessoas);
+        $pessoas = Pessoa::all();
+        return view('secretaria.index')->with('pessoas', $pessoas);
     }
 
     /**
@@ -37,51 +37,56 @@ class SecretariaController extends Controller
      */
     public function store(Request $request)
     {
-        $pessoas = new Pessoa();
 
-        $pessoas->nome = $request->get('nome');
-        $pessoas->telefone = $request->get('telefone');       
-        $pessoas->cpf = $request->get('cpf');
-        $pessoas->dataNascimento = $request->get('dataNascimento');
-        $pessoas->sexo = $request->get('sexo');
-        $pessoas->naturalidade = $request->get('naturalidade');
-        $pessoas->endereco = $request->get('endereco');
-        $pessoas->numeroCasa = $request->get('numeroCasa');
-        $pessoas->bairro = $request->get('bairro');
-        $pessoas->complemento = $request->get('complemento');
-        $pessoas->cidade = $request->get('cidade');
-        $pessoas->cep = $request->get('cep');
-        $pessoas->uf = $request->get('uf');
-        $pessoas->estadocivil = $request->get('estadocivil');
-        $pessoas->observacoes = $request->get('observacoes');
-        $pessoas->estadoMem = $request->get('estadoMem');
+        $request->validate([
+            'nome' => 'required',
+            'telefone' => 'required',
+            'cpf' => 'required',
+            'dataNascimento' => 'required',
+            'sexo',
+            'naturalidade',
+            'endereco',
+            'numeroCasa',
+            'bairro',
+            'complemento',
+            'cidade',
+            'cep',
+            'uf',
+            'estadocivil',
+            'observacoes',
+            'estadoMem',
+            'created_at',
+            'updated_at',
+        ]);
 
-        $pessoas->save();
+        Pessoa::create($request->all());
 
-        return redirect('/secretaria');
-
+        return redirect()->route('secretaria.index')
+            ->with('Sucesso', 'Pessoa Creada Com Sucesso.');
     }
 
     /**
      * Display the specified resource.
      *
      * @param  \App\Models\Secretaria  $secretaria
+     * @param  \App\Models\Pessoa  $pessoas
      * @return \Illuminate\Http\Response
      */
-    public function show(Secretaria $secretaria)
+    public function show(Secretaria $pessoas)
     {
-        //
+        return view('secretaria.index', compact('pessoas'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\Secretaria  $secretaria
+     * @param  \App\Models\Pessoa  $pessoas
      * @return \Illuminate\Http\Response
      */
-    public function edit(Secretaria $secretaria)
+    public function edit(Secretaria $pessoas)
     {
-        return view('secretaria.create-pessoa');
+        return view('secretaria.edit-pessoa', compact('pessoas'));
     }
 
     /**
@@ -89,21 +94,51 @@ class SecretariaController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\Secretaria  $secretaria
+     * @param  \App\Models\Pessoa  $pessoas
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Secretaria $secretaria)
+    public function update(Request $request, Pessoa $pessoas)
     {
-        //
+        $request->validate([
+            'nome' => 'required',
+            'telefone' => 'required',
+            'cpf' => 'required',
+            'dataNascimento' => 'required',
+            'sexo' => 'required',
+            'naturalidade' => 'required',
+            'endereco' => 'required',
+            'numeroCasa' => 'required',
+            'bairro' => 'required',
+            'complemento' => 'required',
+            'cidade' => 'required',
+            'cep' => 'required',
+            'uf' => 'required',
+            'estadocivil' => 'required',
+            'observacoes' => 'required',
+            'estadoMem' => 'required',
+            'created_at' => 'required',
+            'updated_at' => 'required',
+        ]);
+
+        $pessoas->update($request->all());
+
+        return redirect()->route('secretaria.index')
+            ->with('Sucesso', 'Pessoa Atualizada com sucesso.');
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param  \App\Models\Secretaria  $secretaria
+     * @param  \App\Models\Pessoa  $pessoas
      * @return \Illuminate\Http\Response
+     * 
      */
-    public function destroy(Secretaria $secretaria)
+    public function destroy(Pessoa $pessoas)
     {
-        //
+        $pessoas->delete();
+
+        return redirect()->route('secretaria.index')
+            ->with('Sucesso', 'Pessoa Creada Com Sucesso.');
     }
 }

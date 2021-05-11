@@ -13,7 +13,18 @@
         <div class="card-header">
             <h3 class="card-title">Novo Membro</h3>
         </div>
-        <form name="cadastroFor" id="cadastro" action="/secretaria" method="post">
+
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <strong>Whoops!</strong> There were some problems with your input.<br><br>
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+    <form action="{{ route('secretaria.store') }}" method="POST" >
         @csrf
             <div class="col-12">
                 <div class="row">
@@ -30,7 +41,7 @@
                             </div>
                             <input name="telefone" type="text" class="form-control" data-inputmask='"mask": "(99) 99999-9999"' data-mask>
                         </div>
-                    </div>
+                    </div> 
                     <!-- /.input group -->
                     </>
                     <!-- /.form group -->
@@ -56,16 +67,16 @@
                     </div>
                     <div class="col-4">
                         <label>Sexo: *</label>
-                        <select class="select2 form-control custom-select">
+                        <select name="sexo" class="select2 form-control custom-select">
                             <optgroup label="sexo">
-                                <option value="M">Masculino</option>
-                                <option value="F">Feminino</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="feminino">Feminino</option>
                             </optgroup>
                         </select>
                     </div>
                     <div class="col-3">
                         <label for="naturalidade">Naturalidade:</label>
-                        <input id="naturalidade" name="naturalidade" type="text" class=" form-control">
+                        <input id="naturalidade" name="naturalidade" type="text" class="form-control">
                     </div>
                     <!-- <div class="col-4">
                         <label for="rg">RG:</label>
@@ -73,31 +84,31 @@
                     </div> -->
                     <div class="col-4">
                         <label for="endereco">Endereço:</label>
-                        <input id="endereco" name="endereco" type="text" class=" form-control">
+                        <input id="endereco" name="endereco" type="text" class="form-control">
                     </div>
                     <div class="col-2">
                         <label for="numerocasa">Número:</label>
-                        <input id="numerocasa" name="numeroCasa" type="text" class=" form-control">
+                        <input id="numerocasa" name="numeroCasa" type="text" class="form-control">
                     </div>
                     <div class="col-2">
                         <label for="bairro">Bairro:</label>
-                        <input id="bairro" name="bairro" type="text" class=" form-control">
+                        <input id="bairro" name="bairro" type="text" class="form-control">
                     </div>
                     <div class="col-3">
                         <label for="complemento">Complemento:</label>
-                        <input id="complemento" name="complemento" type="text" class=" form-control">
+                        <input id="complemento" name="complemento" type="text" class="form-control">
                     </div>
                     <div class="col-4">
                         <label for="cidade">Cidade:</label>
-                        <input id="cidade" name="cidade" type="text" class=" form-control">
+                        <input id="cidade" name="cidade" type="text" class="form-control">
                     </div>
                     <div class="col-4">
                         <label for="cep">CEP:</label>
-                        <input id="cep" name="cep" type="text" class=" form-control">
+                        <input id="cep" name="cep" type="text" class="form-control">
                     </div>
                     <div class="col-2">
                         <label for="uf">UF:</label>
-                        <input id="uf" name="uf" type="text" class=" form-control">
+                        <input id="uf" name="uf" type="text" class="form-control">
                     </div>
                     <div class="col-4">
                         <label>Estado Cívil:</label>
@@ -118,8 +129,6 @@
                             </optgroup>
                         </select>
                     </div>
-                </div>
-                <div class="row">
                     <div class="col">
                         <label for="cono1">Observações:</label>
                         <div name="observacoes" class="col-sm-5">
@@ -131,6 +140,8 @@
                     <button type="submit" class="btn btn-primary">Salvar</button>
                     <a href="/secretaria" class="btn btn-secondary">Cancelar</a>
                 </div>
+                </div>
+            </div> 
         </form>
     </div>
 </div>

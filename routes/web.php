@@ -25,12 +25,12 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/painel', function () {
 Route::get('/secretaria/secretaria.painel', function () {
     return view('secretaria.painel');
 });
-Route::resource('secretaria', SecretariaController::class);
-// Route::resource('secretaria', 'App\Http\Controllers\SecretariaController');
 
-Route::get('/secretaria/secretaria.edit-pessoa', function () {
-    return view('secretaria.edit-pessoa');
-});
+Route::resource('secretaria', SecretariaController::class);
+
+Route::get('/secretaria/{$id}', [SecretariaController::class,'edit']);
+
+Route::get('/secretaria/{$id}', [SecretariaController::class,'destroy']);
 
 Route::get('/financeiro/financeiro.receitas', function () {
     return view('financeiro.receitas');
