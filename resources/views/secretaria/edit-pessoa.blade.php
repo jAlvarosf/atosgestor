@@ -16,7 +16,7 @@
 
     @if ($errors->any())
     <div class="alert alert-danger">
-      <strong>Whoops!</strong> Erro ao editar <?=$pessoas->nome?>.<br><br>
+      <strong>Whoops!</strong> Erro ao editar <?=$pessoa->nome?>.<br><br>
       <ul>
         @foreach ($errors->all() as $error)
         <li>{{ $error }}</li>
@@ -25,7 +25,7 @@
     </div>
     @endif
 
-    <form action="{{ route('secretaria.update', $pessoas->id) }}" method="POST">
+    <form action="/secretaria/{{$pessoa->id}}" method="POST">
         @csrf
         @method('PUT')
 
@@ -33,7 +33,7 @@
         <div class="row">
           <div class="col-4">
             <label for="nome">Nome: *</label>
-            <input value="{{ $pessoas->name }}" name="nome" type="text" class=" form-control">
+            <input value="{{ $pessoa->nome }}" name="nome" type="text" class=" form-control">
           </div>
           <!-- phone mask -->
           <div class="col-4">
@@ -42,7 +42,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text"><i class="fas fa-phone"></i></span>
               </div>
-              <input value="{{ $pessoas->telefone }}"name="telefone" type="text" class="form-control" data-inputmask='"mask": "(99) 99999-9999"' data-mask>
+              <input value="{{ $pessoa->telefone }}"name="telefone" type="text" class="form-control" data-inputmask='"mask": "(99) 99999-9999"' data-mask>
             </div>
           </div>
           <!-- /.input group -->
@@ -50,7 +50,7 @@
           <!-- /.form group -->
           <div class="col-4">
             <label for="cpf">CPF: *</label>
-            <input value="{{ $pessoas->cpf }}" name="cpf" type="text" class=" form-control cpf-inputmask" placeholder="Clique para inserir">
+            <input value="{{ $pessoa->cpf }}" name="cpf" type="text" class=" form-control cpf-inputmask" placeholder="Clique para inserir">
           </div>
           <!-- <div class="col-4">
                         <label>Foto 3x4:</label>
@@ -62,7 +62,7 @@
           <div class="col-4">
             <label>Nascimento:</label>
             <div class="input-group date" id="reservationdate" data-target-input="nearest">
-              <input value="{{ $pessoas->dataNascimento }}" name="dataNascimento" type="text" class="form-control datetimepicker-input" data-target="#reservationdate" />
+              <input value="{{ $pessoa->dataNascimento }}" name="dataNascimento" type="text" class="form-control datetimepicker-input" data-target="#reservationdate" />
               <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
                 <div class="input-group-text"><i class="fa fa-calendar"></i></div>
               </div>
@@ -72,14 +72,14 @@
             <label>Sexo: *</label>
             <select name="sexo" class="select2 form-control custom-select">
               <optgroup label="sexo">
-                <option value="{{ $pessoas->masculino }}">Masculino</option>
-                <option value="{{ $pessoas->feminino }}">Feminino</option>
+                <option value="{{ $pessoa->masculino }}">Masculino</option>
+                <option value="{{ $pessoa->feminino }}">Feminino</option>
               </optgroup>
             </select>
           </div>
           <div class="col-3">
             <label for="naturalidade">Naturalidade:</label>
-            <input value="{{ $pessoas->naturalidade }}" name="naturalidade" type="text" class="form-control">
+            <input value="{{ $pessoa->naturalidade }}" name="naturalidade" type="text" class="form-control">
           </div>
           <!-- <div class="col-4">
                         <label for="rg">RG:</label>
@@ -87,39 +87,39 @@
                     </div> -->
           <div class="col-4">
             <label for="endereco">Endereço:</label>
-            <input value="{{ $pessoas->endereco }}" name="endereco" type="text" class="form-control">
+            <input value="{{ $pessoa->endereco }}" name="endereco" type="text" class="form-control">
           </div>
           <div class="col-2">
             <label for="numerocasa">Número:</label>
-            <input value="{{ $pessoas->numerocasa }}" name="numeroCasa" type="text" class="form-control">
+            <input value="{{ $pessoa->numerocasa }}" name="numeroCasa" type="text" class="form-control">
           </div>
           <div class="col-2">
             <label for="bairro">Bairro:</label>
-            <input value="{{ $pessoas->bairro }}" name="bairro" type="text" class="form-control">
+            <input value="{{ $pessoa->bairro }}" name="bairro" type="text" class="form-control">
           </div>
           <div class="col-3">
             <label for="complemento">Complemento:</label>
-            <input value="{{ $pessoas->complemento }}" name="complemento" type="text" class="form-control">
+            <input value="{{ $pessoa->complemento }}" name="complemento" type="text" class="form-control">
           </div>
           <div class="col-4">
             <label for="cidade">Cidade:</label>
-            <input value="{{ $pessoas->cidade }}" name="cidade" type="text" class="form-control">
+            <input value="{{ $pessoa->cidade }}" name="cidade" type="text" class="form-control">
           </div>
           <div class="col-4">
             <label for="cep">CEP:</label>
-            <input value="{{ $pessoas->cep }}" name="cep" type="text" class="form-control">
+            <input value="{{ $pessoa->cep }}" name="cep" type="text" class="form-control">
           </div>
           <div class="col-2">
             <label for="uf">UF:</label>
-            <input value="{{ $pessoas->uf }}" name="uf" type="text" class="form-control">
+            <input value="{{ $pessoa->uf }}" name="uf" type="text" class="form-control">
           </div>
           <div class="col-4">
             <label>Estado Cívil:</label>
             <select name="estadocivil" class="select2 form-control custom-select">
               <optgroup label="estadocivil">
-                <option value="{{ $pessoas->solteiro }}">Solteiro</option>
-                <option value="{{ $pessoas->casado }}">Casado</option>
-                <option value="{{ $pessoas->divorciado }}">Divorciado</option>
+                <option value="{{ $pessoa->solteiro }}">Solteiro</option>
+                <option value="{{ $pessoa->casado }}">Casado</option>
+                <option value="{{ $pessoa->divorciado }}">Divorciado</option>
               </optgroup>
             </select>
           </div>
@@ -127,14 +127,14 @@
             <label>Estado do membro:</label>
             <select name="estadoMem" class="select2 form-control custom-select">
               <optgroup label="estadoMem">
-                <option value="{{ $pessoas->ativo }}">Ativo</option>
-                <option value="{{ $pessoas->inativo }}">Inativo</option>
+                <option value="{{ $pessoa->ativo }}">Ativo</option>
+                <option value="{{ $pessoa->inativo }}">Inativo</option>
               </optgroup>
             </select>
           </div>
           <div class="col">
             <label for="cono1">Observações:</label>
-            <div value="{{ $pessoas->observacoes }}"name="observacoes" class="col-sm-5">
+            <div value="{{ $pessoa->observacoes }}"name="observacoes" class="col-sm-5">
               <textarea class="form-control"></textarea>
             </div>
           </div>

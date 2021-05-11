@@ -38,9 +38,9 @@
           <td>{{$pessoa->dataNascimento}}</td>
           <td>{{$pessoa->estadoMem}}</td>
           <td>
-            <form action="{{ route('secretaria.destroy', $pessoa->id) }}" method="POST">
+            <form action="" method="POST">
 
-              <a  class="btn btn-info btn-sm" href="{{ route('secretaria.edit', $pessoa->id) }}">
+              <a class="btn btn-info btn-sm" href="/secretaria/{{ $pessoa->id }}/edit">
                 <i class="fas fa-pencil-alt"></i>
               </a>
 

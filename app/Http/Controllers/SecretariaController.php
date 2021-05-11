@@ -79,14 +79,13 @@ class SecretariaController extends Controller
 
     /**
      * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Secretaria  $secretaria
-     * @param  \App\Models\Pessoa  $pessoas
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Secretaria $pessoas)
+    public function edit($id)
     {
-        return view('secretaria.edit-pessoa', compact('pessoas'));
+        $pessoas = Pessoa::find($id);
+        return view('secretaria.edit-pessoa')->with('pessoa',$pessoas);
     }
 
     /**
@@ -100,24 +99,24 @@ class SecretariaController extends Controller
     public function update(Request $request, Pessoa $pessoas)
     {
         $request->validate([
-            'nome' => 'required',
-            'telefone' => 'required',
-            'cpf' => 'required',
-            'dataNascimento' => 'required',
-            'sexo' => 'required',
-            'naturalidade' => 'required',
-            'endereco' => 'required',
-            'numeroCasa' => 'required',
-            'bairro' => 'required',
-            'complemento' => 'required',
-            'cidade' => 'required',
-            'cep' => 'required',
-            'uf' => 'required',
-            'estadocivil' => 'required',
-            'observacoes' => 'required',
-            'estadoMem' => 'required',
-            'created_at' => 'required',
-            'updated_at' => 'required',
+            'nome',
+            'telefone',
+            'cpf',
+            'dataNascimento',
+            'sexo',
+            'naturalidade',
+            'endereco',
+            'numeroCasa',
+            'bairro',
+            'complemento',
+            'cidade',
+            'cep',
+            'uf',
+            'estadocivil',
+            'observacoes',
+            'estadoMem',
+            'created_at',
+            'updated_at',
         ]);
 
         $pessoas->update($request->all());
