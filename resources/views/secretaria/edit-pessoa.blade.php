@@ -16,7 +16,7 @@
 
     @if ($errors->any())
     <div class="alert alert-danger">
-      <strong>Whoops!</strong> Erro ao editar <?=$pessoa->nome?>.<br><br>
+      <strong>Whoops!</strong> Erro ao editar <?= $pessoa->nome ?>.<br><br>
       <ul>
         @foreach ($errors->all() as $error)
         <li>{{ $error }}</li>
@@ -26,8 +26,9 @@
     @endif
 
     <form action="/secretaria/{{$pessoa->id}}" method="POST">
-        @csrf
-        @method('PUT')
+
+      @csrf
+      @method('PUT')
 
       <div class="col-12">
         <div class="row">
@@ -42,7 +43,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text"><i class="fas fa-phone"></i></span>
               </div>
-              <input value="{{ $pessoa->telefone }}"name="telefone" type="text" class="form-control" data-inputmask='"mask": "(99) 99999-9999"' data-mask>
+              <input value="{{ $pessoa->telefone }}" name="telefone" type="text" class="form-control" data-inputmask='"mask": "(99) 99999-9999"' data-mask>
             </div>
           </div>
           <!-- /.input group -->
@@ -90,8 +91,8 @@
             <input value="{{ $pessoa->endereco }}" name="endereco" type="text" class="form-control">
           </div>
           <div class="col-2">
-            <label for="numerocasa">Número:</label>
-            <input value="{{ $pessoa->numerocasa }}" name="numeroCasa" type="text" class="form-control">
+            <label for="numeroCasa">Número:</label>
+            <input value="{{ $pessoa->numeroCasa }}" name="numeroCasa" type="text" class="form-control">
           </div>
           <div class="col-2">
             <label for="bairro">Bairro:</label>
@@ -126,7 +127,7 @@
           <div class="col-4">
             <label>Estado do membro:</label>
             <select name="estadoMem" class="select2 form-control custom-select">
-              <optgroup label="estadoMem">
+              <optgroup label="Estado do membro">
                 <option value="{{ $pessoa->ativo }}">Ativo</option>
                 <option value="{{ $pessoa->inativo }}">Inativo</option>
               </optgroup>
@@ -134,7 +135,7 @@
           </div>
           <div class="col">
             <label for="cono1">Observações:</label>
-            <div value="{{ $pessoa->observacoes }}"name="observacoes" class="col-sm-5">
+            <div value="{{ $pessoa->observacoes }}" name="observacoes" class="col-sm-5">
               <textarea class="form-control"></textarea>
             </div>
           </div>

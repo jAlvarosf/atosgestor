@@ -84,8 +84,8 @@ class SecretariaController extends Controller
      */
     public function edit($id)
     {
-        $pessoas = Pessoa::find($id);
-        return view('secretaria.edit-pessoa')->with('pessoa',$pessoas);
+        $pessoa = Pessoa::find($id);
+        return view('secretaria.edit-pessoa')->with('pessoa',$pessoa);
     }
 
     /**
@@ -96,30 +96,30 @@ class SecretariaController extends Controller
      * @param  \App\Models\Pessoa  $pessoas
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Pessoa $pessoas)
+    public function update(Request $request, $id)
     {
-        $request->validate([
-            'nome',
-            'telefone',
-            'cpf',
-            'dataNascimento',
-            'sexo',
-            'naturalidade',
-            'endereco',
-            'numeroCasa',
-            'bairro',
-            'complemento',
-            'cidade',
-            'cep',
-            'uf',
-            'estadocivil',
-            'observacoes',
-            'estadoMem',
-            'created_at',
-            'updated_at',
-        ]);
+        $pessoa = Pessoa::find($id);
+        
+        $pessoa->nome = $request->get('nome');
+        $pessoa->telefone = $request->get('telefone');
+        $pessoa->cpf = $request->get('cpf');
+        $pessoa->dataNascimento = $request->get('dataNascimento');
+        $pessoa->sexo = $request->get('sexo');
+        $pessoa->naturalidade = $request->get('naturalidade');
+        $pessoa->endereco = $request->get('endereco');
+        $pessoa->numeroCasa = $request->get('numeroCasa');
+        $pessoa->bairro = $request->get('bairro');
+        $pessoa->complemento = $request->get('complemento');
+        $pessoa->cidade = $request->get('cidade');
+        $pessoa->cep = $request->get('cep');
+        $pessoa->uf = $request->get('uf');
+        $pessoa->estadocivil = $request->get('estadocivil');
+        $pessoa->observacoes = $request->get('observacoes');
+        $pessoa->estadoMem = $request->get('estadoMem');
+        $pessoa->created_at = $request->get('created_at');
+        $pessoa->updated_at = $request->get('updated_at');
 
-        $pessoas->update($request->all());
+        $pessoa->save();
 
         return redirect()->route('secretaria.index')
             ->with('Sucesso', 'Pessoa Atualizada com sucesso.');
@@ -133,11 +133,12 @@ class SecretariaController extends Controller
      * @return \Illuminate\Http\Response
      * 
      */
-    public function destroy(Pessoa $pessoas)
+    public function destroy($id)
     {
-        $pessoas->delete();
+        $pessoa = Pessoa::find($id);
+        $pessoa->delete();
 
         return redirect()->route('secretaria.index')
-            ->with('Sucesso', 'Pessoa Creada Com Sucesso.');
+            ->with('Sucesso', 'Pessoa excluida Com Sucesso.');
     }
 }

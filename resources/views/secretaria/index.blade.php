@@ -26,7 +26,7 @@
           <th>Código</th>
           <th>Nome</th>
           <th>Nascido</th>
-          <th>Status</th>
+          <th>Telefone</th>
           <th>Ações</th>
         </tr>
       </thead>
@@ -36,9 +36,9 @@
           <td>{{$pessoa->id}}</td>
           <td>{{$pessoa->nome}}</td>
           <td>{{$pessoa->dataNascimento}}</td>
-          <td>{{$pessoa->estadoMem}}</td>
+          <td>{{$pessoa->telefone}}</td>
           <td>
-            <form action="" method="POST">
+            <form action="{{ route ('secretaria.destroy',$pessoa->id)}}" method="POST">
 
               <a class="btn btn-info btn-sm" href="/secretaria/{{ $pessoa->id }}/edit">
                 <i class="fas fa-pencil-alt"></i>
