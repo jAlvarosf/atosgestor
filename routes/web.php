@@ -14,7 +14,7 @@ use App\Http\Controllers\SecretariaController;
 */
 
 Route::get('/', function () {
-    return view('auth.login');
+    return view('welcome');
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/painel', function () {

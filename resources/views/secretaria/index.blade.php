@@ -14,7 +14,7 @@
       <a class="btn btn-primary btn-sm" href="secretaria/create">
         <i class="fas fa-folder">
         </i>
-        Novo Usuário
+        Novo Cadastro
       </a>
     </div>
   </div>
@@ -89,7 +89,7 @@
       "responsive": true,
       "lengthChange": false,
       "autoWidth": true,
-      "buttons": ["pdf", "colvis"]
+      "buttons": ["colvis", "pdf"]
     }).buttons().container().appendTo('#pessoas_wrapper .col-md-6:eq(0)');
   });
 </script>
