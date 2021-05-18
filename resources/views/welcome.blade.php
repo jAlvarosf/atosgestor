@@ -15,13 +15,13 @@
 
   <title>Pagina de Apresentação</title>
   <!-- Custom styles for this template -->
-  <link href="{{ asset('css/cover.css') }}" rel="stylesheet">
+  <link href="{{asset('css/cover.css')}}" rel="stylesheet">
 </head>
 
 <body>
   <div class="wrapper">
     <div id="top" class="clearfix">
-      <div id="logo"><img id="logoimage" src="{{asset('vendor/adminlte/images/logo.png')}}" alt="">
+      <div id="logo"><img id="logoimage" src="{{asset('vendor/adminlte/images/favicon.png')}}" alt="">
         <h1 id="logotitle">SistemaAtos</h1>
       </div>
       <!--/logo-->
