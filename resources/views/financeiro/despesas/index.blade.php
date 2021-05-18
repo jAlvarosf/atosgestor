@@ -9,27 +9,12 @@
 @section('content')
 <div class="card">
   <div class="card-header">
-    <h3 class="card-title">Receitas</h3>
+    <h3 class="card-title">Despesas</h3>
     <a class="btn btn-primary btn-sm" href="receitas/create" style="float: right; margin: 2px;">
       <i class="fas fa-folder">
       </i>
-      Renda
+      Nova Despesa
     </a>
-    <a class="btn btn-primary btn-sm" href="receitas/create" style="float: right; margin: 2px;">
-      <i class="fas fa-folder">
-      </i>
-      Doação
-    </a>
-    <a class="btn btn-primary btn-sm" href="receitas/create" style="float: right; margin: 2px;" >
-        <i class="fas fa-folder">
-        </i>
-        Oferta
-      </a>
-      <a class="btn btn-primary btn-sm" href="receitas/create" style="float: right; margin: 2px;">
-        <i class="fas fa-folder">
-        </i>
-        Dizimo
-      </a>
   </div>
   <!-- /.card-header -->
   <div class="card-body">
@@ -44,7 +29,6 @@
         </tr>
       </thead>
       <tbody>
-
         <tr>
           <td></td>
           <td></td>
@@ -52,7 +36,6 @@
           <td></td>
           <td>
             <form action="" method="POST">
-            
               <a class="btn btn-info btn-sm" href="">
                 <i class="fas fa-pencil-alt"></i>
               </a>
@@ -60,7 +43,7 @@
               @csrf
               @method('DELETE')
 
-              <button type="submit" title="delete" class="btn btn-danger btn-sm ">
+              <button type="submit" title="delete" class="btn btn-danger btn-sm">
                 <i class="fas fa-trash"></i>
 
               </button>

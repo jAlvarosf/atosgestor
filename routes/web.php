@@ -31,12 +31,16 @@ Route::get('/secretaria/{$id}', [SecretariaController::class, 'edit']);
 
 Route::get('/secretaria/{$id}', [SecretariaController::class, 'destroy']);
 
-Route::get('/financeiro/receitas/receitas.index', function () {
-    return view('/financeiro/receitas.index');
+Route::get('/financeiro/financeiro.painel', function () {
+    return view('financeiro.painel');
 });
 
-Route::get('/financeiro/financeiro.despesas', function () {
-    return view('financeiro.despesas');
+Route::get('financeiro/receitas/receitas.index', function () {
+    return view('financeiro/receitas.index');
+});
+
+Route::get('financeiro/despesas/despesas.index', function () {
+    return view('financeiro/despesas.index');
 });
 
 Route::get('/financeiro/financeiro.extrato', function () {

@@ -131,7 +131,7 @@
       </section>
       <!-- /section -->
       <section id="copyright" class="clearfix">
-        <p class="left">Copyright &copy; 2012 - <a href="#">Company Name</a>. All Rights Reserved</p>
+        <p class="left">Copyright &copy; 2021 - <a href="https://github.com/jAlvarosf/atosgestor">AtosGestor</a>. All Rights Reserved</p>
         <p class="right">Website Template By <a target="_blank" href="http://www.birondesign.com/">Chris Biron</a> &amp; Modified By <a href="http://www.os-templates.com/">OS Templates</a></p>
       </section>
     </div>

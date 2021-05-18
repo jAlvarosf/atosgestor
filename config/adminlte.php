@@ -229,24 +229,21 @@ return [
             'topnav' => true,
         ],
         [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
-        ],
-        [
             'text' => 'Painel Geral',
             'url'  => '/painel',
-            'icon' => 'fas fa-home',
+            'icon' => 'fas fa-church',
         ],
         [
             'text'    => 'Secretaria',
             'icon'    => 'fas fa-file-invoice',
             'submenu' => [
                 [
+                    'icon' => 'fas fa-archive',
                     'text' => 'Painel',
                     'url'  => 'secretaria/secretaria.painel',
                 ],
                 [
+                    'icon' => 'fas fa-address-book',
                     'text' => 'Lista de Membros',
                     'url'  => '/secretaria',
                 ],
@@ -257,15 +254,22 @@ return [
             'icon'    => 'fas fa-landmark',
             'submenu' => [
                 [
-                    'icon' => 'fas fa-file-invoice',
+                    'icon' => 'far fa-chart-bar',
+                    'text' => 'Painel',
+                    'url'  => 'financeiro/financeiro.painel',
+                ],
+                [
+                    'icon' => 'fas fa-chart-line',
                     'text' => 'Receitas',
-                    'url'  => 'financeiro/financeiro.receitas',
+                    'url'  => 'financeiro/receitas/receitas.index',
                 ],
                 [
+                    'icon' => 'fas fa-chart-pie',
                     'text' => 'Despesas',
-                    'url'  => 'financeiro/financeiro.despesas',
+                    'url'  => 'financeiro/despesas/despesas.index',
                 ],
                 [
+                    'icon' => 'fas fa-file-invoice-dollar',
                     'text' => 'Extrato',
                     'url'  => 'financeiro/financeiro.extrato',
                 ],

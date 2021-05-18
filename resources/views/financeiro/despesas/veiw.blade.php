@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Secretaria - SistemaAtos')
+@section('title', 'Dashboard')
 
 @section('content_header')
-<h1>Painel da Secretaria</h1>
+<h1>Adicionar Membros</h1>
 @stop
 
 @section('content')
