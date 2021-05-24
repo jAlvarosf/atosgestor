@@ -1,165 +1,287 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE HTML>
+<!--
+	Escape Velocity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
 
 <head>
-  
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Theme style -->
-  <link rel="stylesheet" type="text/css" href="{{asset('vendor/adminlte/styles/layout.css')}}">
-
-  <title>Pagina de Apresentação</title>
-  <!-- Custom styles for this template -->
-  <link href="{{asset('css/cover.css')}}" rel="stylesheet">
+  <title>Escape Velocity by HTML5 UP</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="{{asset('site/assets/css/main.css')}}" />
 </head>
 
-<body>
-  <div class="wrapper">
-    <div id="top" class="clearfix">
-      <div id="logo"><img id="logoimage" src="{{asset('vendor/adminlte/images/favicon.png')}}" alt="">
-        <h1 id="logotitle">SistemaAtos</h1>
+<body class="homepage is-preload">
+  <div id="page-wrapper">
+
+    <!-- Header -->
+    <section id="header" class="wrapper">
+
+      <!-- Logo -->
+      <div id="logo">
+        <h1><a href="index.html">Sistema-Atos</a></h1>
+        <p>A free responsive site template by HTML5 UP</p>
       </div>
-      <!--/logo-->
-      <nav>
+
+      <!-- Nav -->
+      <nav id="nav">
         <ul>
-          <li><a href="index.html">HOME</a></li>
-          <li><a href="#">Contact</a></li>
+          <li class="current"><a href="index.html">Home</a></li>
+          <li>
+            <a href="#">Dropdown</a>
+            <ul>
+              <li><a href="#">Lorem ipsum</a></li>
+              <li><a href="#">Magna veroeros</a></li>
+              <li><a href="#">Etiam nisl</a></li>
+              <li>
+                <a href="#">Sed consequat</a>
+                <ul>
+                  <li><a href="#">Lorem dolor</a></li>
+                  <li><a href="#">Amet consequat</a></li>
+                  <li><a href="#">Magna phasellus</a></li>
+                  <li><a href="#">Etiam nisl</a></li>
+                  <li><a href="#">Sed feugiat</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Nisl tempus</a></li>
+            </ul>
+          </li>
+          <li><a href="left-sidebar.html">Left Sidebar</a></li>
+          <li><a href="right-sidebar.html">Right Sidebar</a></li>
+          <li><a href="no-sidebar.html">No Sidebar</a></li>
           <li><a href="login">Login</a></li>
         </ul>
       </nav>
-    </div>
-    <!--/top-->
-    <header>
-      <h1>Hello there, I'm <span>&quot;Your Name&quot;</span>. Welcome to my design portfolio!</h1>
-      <h2>&ndash; Photographer and Web Developer &ndash;</h2>
-    </header>
-    <!-- /header -->
-    <section id="slideshow">
-      <div class="html_carousel">
-        <div id="slider" class="clearfix">
-          <!-- Replace these images with your own but make sure they are 1200px wide and 313px high or the same ratio -->
-          <div class="slide"> <img src="{{asset('vendor/adminlte/images/slideshow/sliderimage1.jpg')}}" alt=""> </div>
-          <div class="slide"> <img src="{{asset('vendor/adminlte/images/slideshow/sliderimage2.jpg')}}" alt=""> </div>
-          <div class="slide"> <img src="{{asset('vendor/adminlte/images/slideshow/sliderimage3.jpg')}}" alt=""> </div>
+
+    </section>
+
+    <!-- Intro -->
+    <section id="intro" class="wrapper style1">
+      <div class="title">The Introduction</div>
+      <div class="container">
+        <p class="style1">So in case you were wondering what this is all about ...</p>
+        <p class="style2">
+          Escape Velocity is a free responsive<br class="mobile-hide" />
+          site template by <a href="http://html5up.net" class="nobr">HTML5 UP</a>
+        </p>
+        <p class="style3">It's <strong>responsive</strong>, built on <strong>HTML5</strong> and <strong>CSS3</strong>, and released for
+          free under the <a href="http://html5up.net/license">Creative Commons Attribution 3.0 license</a>, so use it for any of
+          your personal or commercial projects &ndash; just be sure to credit us!</p>
+        <ul class="actions">
+          <li><a href="#" class="button style3 large">Proceed</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Main -->
+    <section id="main" class="wrapper style2">
+      <div class="title">The Details</div>
+      <div class="container">
+
+        <!-- Image -->
+        <a href="#" class="image featured">
+          <img src="{{asset('site/images/pic01.jpg')}}" alt="" />
+        </a>
+
+        <!-- Features -->
+        <section id="features">
+          <header class="style1">
+            <h2>Dolor consequat feugiat amet veroeros</h2>
+            <p>Feugiat dolor nullam orci pretium phasellus justo</p>
+          </header>
+          <div class="feature-list">
+            <div class="row">
+              <div class="col-6 col-12-medium">
+                <section>
+                  <h3 class="icon fa-comment">Mattis velit diam vulputate</h3>
+                  <p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate et magna feugiat laoreet vel velit lorem.</p>
+                </section>
+              </div>
+              <div class="col-6 col-12-medium">
+                <section>
+                  <h3 class="icon solid fa-sync">Lorem ipsum dolor sit veroeros</h3>
+                  <p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate et magna feugiat laoreet vel velit lorem.</p>
+                </section>
+              </div>
+              <div class="col-6 col-12-medium">
+                <section>
+                  <h3 class="icon fa-image">Pretium phasellus justo lorem</h3>
+                  <p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate et magna feugiat laoreet vel velit lorem.</p>
+                </section>
+              </div>
+              <div class="col-6 col-12-medium">
+                <section>
+                  <h3 class="icon solid fa-cog">Tempus sed pretium orci</h3>
+                  <p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate et magna feugiat laoreet vel velit lorem.</p>
+                </section>
+              </div>
+              <div class="col-6 col-12-medium">
+                <section>
+                  <h3 class="icon solid fa-wrench">Aliquam consequat et feugiat</h3>
+                  <p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate et magna feugiat laoreet vel velit lorem.</p>
+                </section>
+              </div>
+              <div class="col-6 col-12-medium">
+                <section>
+                  <h3 class="icon solid fa-check">Dolore laoreet aliquam mattis</h3>
+                  <p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate et magna feugiat laoreet vel velit lorem.</p>
+                </section>
+              </div>
+            </div>
+          </div>
+          <ul class="actions special">
+            <li><a href="#" class="button style1 large">Get Started</a></li>
+            <li><a href="#" class="button style2 large">More Info</a></li>
+          </ul>
+        </section>
+
+      </div>
+    </section>
+
+    <!-- Highlights -->
+    <section id="highlights" class="wrapper style3">
+      <div class="title">The Endorsements</div>
+      <div class="container">
+        <div class="row aln-center">
+          <div class="col-4 col-12-medium">
+            <section class="highlight">
+              <a href="#" class="image featured"><img src="{{asset('site/images/pic02.jpg')}}" alt="" /></a>
+              <h3><a href="#">Aliquam diam consequat</a></h3>
+              <p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
+              <ul class="actions">
+                <li><a href="#" class="button style1">Learn More</a></li>
+              </ul>
+            </section>
+          </div>
+          <div class="col-4 col-12-medium">
+            <section class="highlight">
+              <a href="#" class="image featured"><img src="{{asset('site/images/pic03.jpg')}}" alt="" /></a>
+              <h3><a href="#">Nisl adipiscing sed lorem</a></h3>
+              <p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
+              <ul class="actions">
+                <li><a href="#" class="button style1">Learn More</a></li>
+              </ul>
+            </section>
+          </div>
+          <div class="col-4 col-12-medium">
+            <section class="highlight">
+              <a href="#" class="image featured"><img src="{{asset('site/images/pic04.jpg')}}" alt="" /></a>
+              <h3><a href="#">Mattis tempus lorem</a></h3>
+              <p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
+              <ul class="actions">
+                <li><a href="#" class="button style1">Learn More</a></li>
+              </ul>
+            </section>
+          </div>
         </div>
       </div>
     </section>
-    <!-- /section -->
-    <aside id="about" class="left">
-      <h3>about me</h3>
-      <p>Hey there, my name is &quot;Your Name&quot; and I am a photographer and web developer! This is my brand new portfolio. It's super cool because it's completely responsive! That means you can re-size it to whatever size you like and it always looks great. Have a look around and enjoy.</p>
-    </aside>
-    <!-- /aside -->
-    <aside class="right">
-      <h3>my work</h3>
-      <p>Below, you will be able to find lots of my work. I take loads of pretty pictures and I also make websites. If you like what you see then you can contact me below! Maybe you would like to hire me or just have a chat, either way, I look forward to hearing from you.</p>
-    </aside>
-    <!-- /aside -->
-    <div class="clearfix"></div>
-    <section id="work" class="clearfix">
-      <!-- Images must be 200px by 150px -->
-      <div class="item"> <a href="#"><img src="{{asset('vendor/adminlte/images/work/thumbs/item.jpg')}}" alt=""></a>
-        <h3>Skies Of Spain</h3>
-        <p>photography</p>
-      </div>
-      <div class="item"> <a href="#"><img src="{{asset('vendor/adminlte/images/work/thumbs/item2.jpg')}}" alt=""></a>
-        <h3>Beautiful Bahrain</h3>
-        <p>photography</p>
-      </div>
-      <div class="item"> <a href="#"><img src="{{asset('vendor/adminlte/images/work/thumbs/item3.jpg')}}" alt=""></a>
-        <h3>Wild Stripes</h3>
-        <p>photo manipulation</p>
-      </div>
-      <div class="item"> <a href="#"><img src="{{asset('vendor/adminlte/images/work/thumbs/item4.jpg')}}" alt=""></a>
-        <h3>Lazy Days</h3>
-        <p>photo manipulation</p>
-      </div>
-      <div class="item"> <a href="#"><img src="{{asset('vendor/adminlte/images/work/thumbs/item5.jpg')}}" alt=""></a>
-        <h3>Trapped</h3>
-        <p>photography</p>
-      </div>
-      <div class="item"> <a href="#"><img src="{{asset('vendor/adminlte/images/work/thumbs/item6.jpg')}}" alt=""></a>
-        <h3>Quad-Core</h3>
-        <p>photography</p>
-      </div>
-      <div class="item"> <a href="#"><img src="{{asset('vendor/adminlte/images/work/thumbs/item7.jpg')}}" alt=""></a>
-        <h3>Retro Blast</h3>
-        <p>illustration</p>
-      </div>
-      <div class="item"> <a href="#"><img src="{{asset('vendor/adminlte/images/work/thumbs/item8.jpg')}}" alt=""></a>
-        <h3>Gates Of The Sun</h3>
-        <p>photography</p>
-      </div>
-      <div class="item"> <a href="#"><img src="{{asset('vendor/adminlte/images/work/thumbs/item9.jpg')}}" alt=""></a>
-        <h3>Winter Touch</h3>
-        <p>photography</p>
-      </div>
-      <div class="item"> <a href="#"><img src="{{asset('vendor/adminlte/images/work/thumbs/item10.jpg')}}" alt=""></a>
-        <h3>Burn</h3>
-        <p>photo manipulation</p>
+
+    <!-- Footer -->
+    <section id="footer" class="wrapper">
+      <div class="title">The Rest Of It</div>
+      <div class="container">
+        <header class="style1">
+          <h2>Ipsum sapien elementum portitor?</h2>
+          <p>
+            Sed turpis tortor, tincidunt sed ornare in metus porttitor mollis nunc in aliquet.<br />
+            Nam pharetra laoreet imperdiet volutpat etiam feugiat.
+          </p>
+        </header>
+        <div class="row">
+          <div class="col-6 col-12-medium">
+
+            <!-- Contact Form -->
+            <section>
+              <form method="post" action="#">
+                <div class="row gtr-50">
+                  <div class="col-6 col-12-small">
+                    <input type="text" name="name" id="contact-name" placeholder="Name" />
+                  </div>
+                  <div class="col-6 col-12-small">
+                    <input type="text" name="email" id="contact-email" placeholder="Email" />
+                  </div>
+                  <div class="col-12">
+                    <textarea name="message" id="contact-message" placeholder="Message" rows="4"></textarea>
+                  </div>
+                  <div class="col-12">
+                    <ul class="actions">
+                      <li><input type="submit" class="style1" value="Send" /></li>
+                      <li><input type="reset" class="style2" value="Reset" /></li>
+                    </ul>
+                  </div>
+                </div>
+              </form>
+            </section>
+
+          </div>
+          <div class="col-6 col-12-medium">
+
+            <!-- Contact -->
+            <section class="feature-list small">
+              <div class="row">
+                <div class="col-6 col-12-small">
+                  <section>
+                    <h3 class="icon solid fa-home">Mailing Address</h3>
+                    <p>
+                      Untitled Corp<br />
+                      1234 Somewhere Rd<br />
+                      Nashville, TN 00000
+                    </p>
+                  </section>
+                </div>
+                <div class="col-6 col-12-small">
+                  <section>
+                    <h3 class="icon solid fa-comment">Social</h3>
+                    <p>
+                      <a href="#">@untitled-corp</a><br />
+                      <a href="#">linkedin.com/untitled</a><br />
+                      <a href="#">facebook.com/untitled</a>
+                    </p>
+                  </section>
+                </div>
+                <div class="col-6 col-12-small">
+                  <section>
+                    <h3 class="icon solid fa-envelope">Email</h3>
+                    <p>
+                      <a href="#">info@untitled.tld</a>
+                    </p>
+                  </section>
+                </div>
+                <div class="col-6 col-12-small">
+                  <section>
+                    <h3 class="icon solid fa-phone">Phone</h3>
+                    <p>
+                      (000) 555-0000
+                    </p>
+                  </section>
+                </div>
+              </div>
+            </section>
+
+          </div>
+        </div>
+        <div id="copyright">
+          <ul>
+            <li>&copy; Untitled.</li>
+            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+          </ul>
+        </div>
       </div>
     </section>
-    <!-- /section -->
-    <section id="bottom">
-      <h3>Thanks for looking at my new website!</h3>
-    </section>
-    <!-- /section -->
+
   </div>
-  <footer id="footer" class="clearfix">
-    <div class="wrapper">
-      <section class="left">
-        <h4>Contact</h4>
-        <div id="formwrap">
-          <form method="post" id="submitform" action="#">
-            <input type="text" class="formstyle" title="Name" name="name">
-            <input type="text" class="formstyle" title="Email" name="email">
-            <textarea name="message" title="Message"></textarea>
-            <input class="formstyletwo" type="submit" value="Send">
-          </form>
-        </div>
-        <div id="error"></div>
-      </section>
-      <section class="right social clear">
-        <!-- Replace with any 32px x 32px icons -->
-        <a href="#"><img class="icon" src="{{asset('vendor/adminlte/images/icons/google.png')}}" alt=""></a> <a href="#"><img class="icon" src="{{asset('vendor/adminlte/images/icons/youtube.png')}}" alt=""></a> <a href="#"><img class="icon" src="{{asset('vendor/adminlte/images/icons/facebook.png')}}" alt=""></a> <a href="#"><img class="icon" src="{{asset('vendor/adminlte/images/icons/twitter.png')}}" alt=""></a>
-        <!-- /icons -->
-      </section>
-      <!-- /section -->
-      <section id="copyright" class="clearfix">
-        <p class="left">Copyright &copy; 2021 - <a href="https://github.com/jAlvarosf/atosgestor">AtosGestor</a>. All Rights Reserved</p>
-        <p class="right">Website Template By <a target="_blank" href="http://www.birondesign.com/">Chris Biron</a> &amp; Modified By <a href="http://www.os-templates.com/">OS Templates</a></p>
-      </section>
-    </div>
-  </footer>
 
+  <!-- Scripts -->
+  <script src="{{asset('site/assets/js/jquery.min.js')}}"></script>
+  <script src="{{asset('site/assets/js/jquery.dropotron.min.js')}}"></script>
+  <script src="{{asset('site/assets/js/browser.min.js')}}"></script>
+  <script src="{{asset('site/assets/js/breakpoints.min.js')}}"></script>
+  <script src="{{asset('site/assets/js/util.js')}}"></script>
+  <script src="{{asset('site/assets/js/main.js')}}"></script>
 
-  <!-- Bootstrap core JavaScript
-    ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script src="{{asset('vendor/adminlte/scripts/jquery-1.7.2.min.js')}}"></script>
-  <script src="{{asset('vendor/adminlte/scripts/jquery.carouFredSel-5.5.2.js')}}"></script>
-  <script src="{{asset('vendor/adminlte/scripts/jquery.easing.1.3.js')}}"></script>
-  <!-- SLIDESHOW SCRIPT START -->
-  <script>
-    $("#slider")
-      .carouFredSel({
-        responsive: true,
-        scroll: {
-          fx: "crossfade",
-          easing: "swing",
-          duration: 1000,
-        },
-        items: {
-          visible: 1,
-          height: "27%"
-        }
-      });
-  </script>
 </body>
 
 </html>
