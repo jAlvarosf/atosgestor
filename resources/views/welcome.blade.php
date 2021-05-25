@@ -7,7 +7,7 @@
 <html>
 
 <head>
-  <title>Escape Velocity by HTML5 UP</title>
+  <title>Sistema-AtosGestor</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="{{asset('site/assets/css/main.css')}}" />
@@ -21,15 +21,17 @@
 
       <!-- Logo -->
       <div id="logo">
-        <h1><a href="index.html">Sistema-Atos</a></h1>
-        <p>A free responsive site template by HTML5 UP</p>
+        <h1><a href="/login">Sistema-Atos</a></h1>
+        <p>Um sistema de Gerenciamento de igrejas moderno</p>
       </div>
 
       <!-- Nav -->
       <nav id="nav">
         <ul>
-          <li class="current"><a href="index.html">Home</a></li>
-          <li>
+          <li class="current">
+            <a href="/"><i class="fas fa-church"></i> Home </a>
+          </li>
+          <!-- <li>
             <a href="#">Dropdown</a>
             <ul>
               <li><a href="#">Lorem ipsum</a></li>
@@ -47,10 +49,10 @@
               </li>
               <li><a href="#">Nisl tempus</a></li>
             </ul>
-          </li>
-          <li><a href="left-sidebar.html">Left Sidebar</a></li>
-          <li><a href="right-sidebar.html">Right Sidebar</a></li>
-          <li><a href="no-sidebar.html">No Sidebar</a></li>
+          </li> -->
+          <li><a href="left-sidebar.html">Historia</a></li>
+          <li><a href="right-sidebar.html">Noticias</a></li>
+          <li><a href="no-sidebar.html">Programaçôes</a></li>
           <li><a href="login">Login</a></li>
         </ul>
       </nav>
@@ -59,19 +61,19 @@
 
     <!-- Intro -->
     <section id="intro" class="wrapper style1">
-      <div class="title">The Introduction</div>
+      <div class="title">Introdução</div>
       <div class="container">
-        <p class="style1">So in case you were wondering what this is all about ...</p>
-        <p class="style2">
-          Escape Velocity is a free responsive<br class="mobile-hide" />
-          site template by <a href="http://html5up.net" class="nobr">HTML5 UP</a>
+        <p class="style1">Então, caso você esteja se perguntando do que se trata ...</p>
+        <p class="style2">O SITEMA-ATOS é um sitema voltado para <br class="mobile-hide" />
+          gestão de igrejas da <a href="/login" class="nobr">ATOSGESTOR</a>
         </p>
-        <p class="style3">It's <strong>responsive</strong>, built on <strong>HTML5</strong> and <strong>CSS3</strong>, and released for
-          free under the <a href="http://html5up.net/license">Creative Commons Attribution 3.0 license</a>, so use it for any of
-          your personal or commercial projects &ndash; just be sure to credit us!</p>
-        <ul class="actions">
+        <!-- &ndash; usado para colocar um " - " -->
+        <p class="style3"> É <strong>responsivo</strong>, construído em <strong>HTML5</strong> , <strong>CSS3</strong> e <strong>LARAVEL 8</strong>
+          , desenvolvido por <a href="https://github.com/jAlvarosf">Jose Alvaro</a>, gerencie igrejas com
+          praticidade e dinamismo, que Deus sempre nos abençoe em tudo.</p>
+        <!-- <ul class="actions">
           <li><a href="#" class="button style3 large">Proceed</a></li>
-        </ul>
+        </ul> -->
       </div>
     </section>
 
