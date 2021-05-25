@@ -8,9 +8,26 @@
 
 <head>
   <title>Sistema-AtosGestor</title>
+  <meta name="msapplication-TileColor" content="#416f97">
+  <meta name="msapplication-TileImage" content="{{asset('site/images/favicon/ms-icon-144x144.png')}}">
+  <meta name="theme-color" content="#416f97">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="{{asset('site/assets/css/main.css')}}" />
+  <link rel="apple-touch-icon" sizes="57x57" href="{{asset('site/images/favicon/apple-icon-57x57.png')}}">
+  <link rel="apple-touch-icon" sizes="60x60" href="{{asset('site/images/favicon/apple-icon-60x60.png')}}">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{asset('site/images/favicon/apple-icon-72x72.png')}}">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{asset('site/images/favicon/apple-icon-76x76.png')}}">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{asset('site/images/favicon/apple-icon-114x114.png')}}">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{asset('site/images/favicon/apple-icon-120x120.png')}}">
+  <link rel="apple-touch-icon" sizes="144x144" href="{{asset('site/images/favicon/apple-icon-144x144.png')}}">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{asset('site/images/favicon/apple-icon-152x152.png')}}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{asset('site/images/favicon/apple-icon-180x180.png')}}">
+  <link rel="icon" type="image/png" sizes="192x192" href="{{asset('site/images/favicon/android-icon-192x192.png')}}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{asset('site/images/favicon/favicon-32x32.png')}}">
+  <link rel="icon" type="image/png" sizes="96x96" href="{{asset('site/images/favicon/favicon-96x96.png')}}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{asset('site/images/favicon/favicon-16x16.png')}}">
+  <link rel="manifest" href="{{asset('site/images/favicon/manifest.json')}}">
 </head>
 
 <body class="homepage is-preload">
@@ -22,7 +39,7 @@
       <!-- Logo -->
       <div id="logo">
         <h1><a href="/login">Sistema-Atos</a></h1>
-        <p>Um sistema de Gerenciamento de igrejas moderno</p>
+        <p>Um sistema de Gerenciamento de igrejas on-line</p>
       </div>
 
       <!-- Nav -->
@@ -64,8 +81,8 @@
       <div class="title">Introdução</div>
       <div class="container">
         <p class="style1">Então, caso você esteja se perguntando do que se trata ...</p>
-        <p class="style2">O SITEMA-ATOS é um sitema voltado para <br class="mobile-hide" />
-          gestão de igrejas da <a href="/login" class="nobr">ATOSGESTOR</a>
+        <p class="style2">O SITEMA-ATOS é voltado para <br class="mobile-hide" />
+          gestão de igrejas on-line da <a href="/login" class="nobr">ATOSGESTOR</a>
         </p>
         <!-- &ndash; usado para colocar um " - " -->
         <p class="style3"> É <strong>responsivo</strong>, construído em <strong>HTML5</strong> , <strong>CSS3</strong> e <strong>LARAVEL 8</strong>
@@ -79,7 +96,7 @@
 
     <!-- Main -->
     <section id="main" class="wrapper style2">
-      <div class="title">The Details</div>
+      <div class="title">Alguns Detalhes</div>
       <div class="container">
 
         <!-- Image -->
