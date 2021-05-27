@@ -16,17 +16,18 @@ $(function () {
   var salesChart = new Chart($salesChart, {
     type: 'bar',
     data: {
-      labels: ['JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
+      labels: ['JAN', 'FEV', 'MAR', 'ABR', 'MAI',
+        'JUN', 'JUL', 'AGO', 'SET', 'OUT', 'NOV', 'DEC'],
       datasets: [
         {
           backgroundColor: '#17a2b8',
           borderColor: '#17a2b8',
-          data: [1000, 2000, 3000, 2500, 2700, 2500, 3000]
+          data: [1000, 2000, 3000, 2500, 2700, 2500, 3000, 700, 1700, 2700, 2000, 1800]
         },
         {
           backgroundColor: '#dc3545',
           borderColor: '#dc3545',
-          data: [700, 1700, 2700, 2000, 1800, 1500, 2000]
+          data: [700, 1700, 2700, 2000, 1800, 1500, 2000,1000, 2000, 3000, 2500, 2700]
         }
       ]
     },
