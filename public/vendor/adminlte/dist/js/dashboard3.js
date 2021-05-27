@@ -19,13 +19,13 @@ $(function () {
       labels: ['JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
       datasets: [
         {
-          backgroundColor: '#007bff',
-          borderColor: '#007bff',
+          backgroundColor: '#17a2b8',
+          borderColor: '#17a2b8',
           data: [1000, 2000, 3000, 2500, 2700, 2500, 3000]
         },
         {
-          backgroundColor: '#ced4da',
-          borderColor: '#ced4da',
+          backgroundColor: '#dc3545',
+          borderColor: '#dc3545',
           data: [700, 1700, 2700, 2000, 1800, 1500, 2000]
         }
       ]
