@@ -14,34 +14,35 @@ use App\Http\Controllers\SecretariaController;
 */
 
 Route::get('/', function () {
-    return view('auth.login');
+    return view('welcome');
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/painel', function () {
     return view('painel.index');
 })->name('Index');
 
-
 Route::get('/secretaria/secretaria.painel', function () {
     return view('secretaria.painel');
 });
+
 Route::resource('secretaria', SecretariaController::class);
-// Route::resource('secretaria', 'App\Http\Controllers\SecretariaController');
 
-Route::get('/secretaria/secretaria.edit-pessoa', function () {
-    return view('secretaria.edit-pessoa');
+Route::get('/secretaria/{$id}', [SecretariaController::class, 'edit']);
+
+Route::get('/secretaria/{$id}', [SecretariaController::class, 'destroy']);
+
+Route::get('/financeiro/financeiro.painel', function () {
+    return view('financeiro.painel');
 });
 
-Route::get('/financeiro/financeiro.receitas', function () {
-    return view('financeiro.receitas');
+Route::get('financeiro/receitas/receitas.index', function () {
+    return view('financeiro/receitas.index');
 });
 
-Route::get('/financeiro/financeiro.despesas', function () {
-    return view('financeiro.despesas');
+Route::get('financeiro/despesas/despesas.index', function () {
+    return view('financeiro/despesas.index');
 });
 
 Route::get('/financeiro/financeiro.extrato', function () {
     return view('financeiro.extrato');
 });
-
-

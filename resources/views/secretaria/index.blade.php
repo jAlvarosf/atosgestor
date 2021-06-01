@@ -7,7 +7,6 @@
 @stop
 
 @section('content')
-<!-- /.content -->
 <div class="card">
   <div class="card-header">
     <h3 class="card-title">Lista de Cadastrados</h3>
@@ -15,42 +14,44 @@
       <a class="btn btn-primary btn-sm" href="secretaria/create">
         <i class="fas fa-folder">
         </i>
-        Novo Usuário
+        Novo Cadastro
       </a>
     </div>
   </div>
   <!-- /.card-header -->
   <div class="card-body">
-    <table id="example1" class="table table-bordered table-striped">
+    <table id="pessoas" class="table table-bordered table-striped">
       <thead>
         <tr>
           <th>Código</th>
           <th>Nome</th>
-          <th>CPF</th>
-          <th>Data de nascimento</th>
+          <th>Nascido</th>
           <th>Telefone</th>
-          <th>Status</th>
+          <th>Ações</th>
         </tr>
       </thead>
       <tbody>
         @foreach ($pessoas as $pessoa)
         <tr>
-          <td>{{$pessoa->status}}</td>
+          <td>{{$pessoa->id}}</td>
           <td>{{$pessoa->nome}}</td>
-          <td>{{$pessoa->codigo}}</td>
-          <td>{{$pessoa->cpf}}</td>
           <td>{{$pessoa->dataNascimento}}</td>
           <td>{{$pessoa->telefone}}</td>
-
           <td>
-            <a class="btn btn-info btn-sm" href="secretaria/edit">
-              <i class="fas fa-pencil-alt">
-              </i>
-            </a>
-            <a class="btn btn-danger btn-sm" href="secretaria/destroy">
-              <i class="fas fa-trash">
-              </i>
-            </a>
+            <form action="{{ route ('secretaria.destroy',$pessoa->id)}}" method="POST">
+
+              <a class="btn btn-info btn-sm" href="/secretaria/{{ $pessoa->id }}/edit">
+                <i class="fas fa-pencil-alt"></i>
+              </a>
+
+              @csrf
+              @method('DELETE')
+
+              <button type="submit" title="delete" class="btn btn-danger btn-sm">
+                <i class="fas fa-trash"></i>
+
+              </button>
+            </form>
           </td>
         </tr>
         @endforeach
@@ -60,8 +61,6 @@
   <!-- /.card-body -->
 </div>
 <!-- /.card -->
-</div>
-<!-- /.col -->
 @stop
 
 @section('css')
@@ -75,25 +74,23 @@
 <!-- DataTables  & Plugins -->
 <script src="{{asset('vendor/adminlte/plugins/datatables/jquery.dataTables.min.js')}}"></script>
 <script src="{{asset('vendor/adminlte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
-<script src="{{asset('vendor/adminlte/plugins/datatables-responsive/js/dataTables.responsive.min.js')}}"></script>
 <script src="{{asset('vendor/adminlte/plugins/datatables-responsive/js/responsive.bootstrap4.min.js')}}"></script>
 <script src="{{asset('vendor/adminlte/plugins/datatables-buttons/js/dataTables.buttons.min.js')}}"></script>
 <script src="{{asset('vendor/adminlte/plugins/datatables-buttons/js/buttons.bootstrap4.min.js')}}"></script>
 <script src="{{asset('vendor/adminlte/plugins/pdfmake/pdfmake.min.js')}}"></script>
 <script src="{{asset('vendor/adminlte/plugins/pdfmake/vfs_fonts.js')}}"></script>
 <script src="{{asset('vendor/adminlte/plugins/datatables-buttons/js/buttons.html5.min.js')}}"></script>
-<script src="{{asset('vendor/adminlte/plugins/datatables-buttons/js/buttons.print.min.js')}}"></script>
 <script src="{{asset('vendor/adminlte/plugins/datatables-buttons/js/buttons.colVis.min.js')}}"></script>
 <!-- AdminLTE App -->
 <!-- Page specific script -->
 <script>
   $(function() {
-    $("#example1").DataTable({
+    $("#pessoas").DataTable({
       "responsive": true,
       "lengthChange": false,
       "autoWidth": true,
-      "buttons": ["pdf", "colvis"]
-    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+      "buttons": ["colvis", "pdf"]
+    }).buttons().container().appendTo('#pessoas_wrapper .col-md-6:eq(0)');
   });
 </script>
 @stop
