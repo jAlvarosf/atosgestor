@@ -47,7 +47,7 @@ return [
 
     'logo' => '<b>Sistema</b>Atos',
     'logo_img' => 'vendor/adminlte/dist/img/Logo.png',
-    'logo_img_class' => 'brand-image img-circle elevation-3',
+    'logo_img_class' => 'brand-image img-circle elevation-2',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
     'logo_img_alt' => 'AdminLTE',
@@ -86,7 +86,7 @@ return [
     'layout_boxed' => null,
     'layout_fixed_sidebar' => null,
     'layout_fixed_navbar' => null,
-    'layout_fixed_footer' => null,
+    'layout_fixed_footer' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -125,7 +125,7 @@ return [
     'classes_content_wrapper' => '',
     'classes_content_header' => '',
     'classes_content' => '',
-    'classes_sidebar' => 'sidebar-light-primary elevation-3',
+    'classes_sidebar' => 'sidebar-light-primary elevation-2',
     'classes_sidebar_nav' => '',
     'classes_topnav' => 'navbar-light navbar-light',
     'classes_topnav_nav' => 'navbar-expand',
@@ -186,7 +186,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'painel',
+    'dashboard_url' => '/painel',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -229,24 +229,21 @@ return [
             'topnav' => true,
         ],
         [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
-        ],
-        [
-            'text' => 'Painel',
+            'text' => 'Painel Geral',
             'url'  => '/painel',
-            'icon' => 'fas fa-home',
+            'icon' => 'fas fa-church',
         ],
         [
             'text'    => 'Secretaria',
             'icon'    => 'fas fa-file-invoice',
             'submenu' => [
                 [
+                    'icon' => 'fas fa-archive',
                     'text' => 'Painel',
                     'url'  => 'secretaria/secretaria.painel',
                 ],
                 [
+                    'icon' => 'fas fa-address-book',
                     'text' => 'Lista de Membros',
                     'url'  => '/secretaria',
                 ],
@@ -257,15 +254,22 @@ return [
             'icon'    => 'fas fa-landmark',
             'submenu' => [
                 [
-                    'icon' => 'fas fa-file-invoice',
+                    'icon' => 'far fa-chart-bar',
+                    'text' => 'Painel',
+                    'url'  => 'financeiro/financeiro.painel',
+                ],
+                [
+                    'icon' => 'fas fa-chart-line',
                     'text' => 'Receitas',
-                    'url'  => 'financeiro/financeiro.receitas',
+                    'url'  => 'financeiro/receitas/receitas.index',
                 ],
                 [
+                    'icon' => 'fas fa-chart-pie',
                     'text' => 'Despesas',
-                    'url'  => 'financeiro/financeiro.despesas',
+                    'url'  => 'financeiro/despesas/despesas.index',
                 ],
                 [
+                    'icon' => 'fas fa-file-invoice-dollar',
                     'text' => 'Extrato',
                     'url'  => 'financeiro/financeiro.extrato',
                 ],
