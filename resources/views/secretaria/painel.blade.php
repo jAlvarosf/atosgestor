@@ -1,49 +1,85 @@
 @extends('adminlte::page')
 
-@section('title', 'Adicionar Membros')
+@section('title', 'Secretaria - SistemaAtos')
 
 @section('content_header')
-<h1>Adicionar Membros</h1>
+<h1>Painel da Secretaria</h1>
 @stop
 
 @section('content')
 
 <section class="content">
   <div class="container-fluid">
-    <!-- Info boxes -->
-    <div class="row">
-      <div class="col-12 col-sm-6 col-md-3">
-        <div class="info-box">
-          <span class="info-box-icon bg-info elevation-1"><i class="fas fa-users"></i></span>
-          <div class="info-box-content">
-            <span class="info-box-text">Membros</span>
-            <span class="info-box-number">
-            </span>
+     <!-- /.row -->
+     <div class="row">
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box">
+              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Congregados</span>
+                <span class="info-box-number">
+                  
+                </span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
           </div>
-          <!-- /.info-box-content -->
-        </div>
-        <!-- /.info-box -->
-      </div>
-      <!-- /.col -->
-      <div class="col-12 col-sm-6 col-md-3">
-        <div class="info-box mb-3">
-          <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
-          <div class="info-box-content">
-            <span class="info-box-text">Visitantes</span>
-            <span class="info-box-number">
-            </span>
+          <!-- /.col -->
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Membros</span>
+                <span class="info-box-number"> 
+                  
+                  </span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
           </div>
-          <!-- /.info-box-content -->
+          <!-- /.col -->
+
+          <!-- fix for small devices only -->
+          <div class="clearfix hidden-md-up"></div>
+
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">visitantes</span>
+                <span class="info-box-number">
+                
+                </span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Eclesiásticos</span>
+                <span class="info-box-number">
+                </span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
         </div>
-        <!-- /.info-box -->
-      </div>
-      <!-- /.col -->
-    </div>
-    <!-- /.row -->
+        <!-- /.row -->
   </div>
   <!--/. container-fluid -->
 </section>
-<!--  -->
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <div class="container-fluid">
@@ -130,7 +166,7 @@
   </section>
   <!-- /.content -->
 </div>
-<!-- /.content-wrapper -->
+<!-- ./wrapper -->
 
 @stop
 
@@ -141,22 +177,16 @@
 <link rel="stylesheet" href="{{asset('vendor/adminlte/plugins/fontawesome-free/css/all.min.css')}}">
 <!-- fullCalendar -->
 <link rel="stylesheet" href="{{asset('vendor/adminlte/plugins/fullcalendar/main.css')}}">
-
+<!-- Theme style -->
 <link rel="stylesheet" href="/css/admin_custom.css">
 @stop
 
 @section('js')
-
-<!-- Bootstrap -->
-<script src="{{asset('vendor/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <!-- jQuery UI -->
 <script src="{{asset('vendor/adminlte/plugins/jquery-ui/jquery-ui.min.js')}}"></script>
-<!-- <script src="{{asset('vendor/adminlte/plugins/jquery/jquery.min.js')}}"></script> -->
 <!-- fullCalendar 2.2.5 -->
 <script src="{{asset('vendor/adminlte/plugins/moment/moment.min.js')}}"></script>
 <script src="{{asset('vendor/adminlte/plugins/fullcalendar/main.js')}}"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="{{asset('vendor/adminlte/dist/js/demo.js')}}"></script>
 <!-- Page specific script -->
 <script>
   $(function() {
@@ -263,7 +293,7 @@
           borderColor: '#00a65a' //Success (green)
         },
         {
-          title: 'Click for Google',
+          title: 'Google',
           start: new Date(y, m, 28),
           end: new Date(y, m, 29),
           url: 'https://www.google.com/',
