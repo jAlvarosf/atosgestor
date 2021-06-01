@@ -19,13 +19,13 @@
             <strong>Whoops!</strong> There were some problems with your input.<br><br>
             <ul>
                 @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
+                <li>{{ $error }}</li>
                 @endforeach
             </ul>
         </div>
-    @endif
-    <form action="{{ route('secretaria.store') }}" method="POST" >
-        @csrf
+        @endif
+        <form action="{{ route('secretaria.store') }}" method="POST">
+            @csrf
             <div class="col-12">
                 <div class="row">
                     <div class="col-4">
@@ -41,7 +41,7 @@
                             </div>
                             <input name="telefone" type="text" class="form-control" data-inputmask='"mask": "(99) 99999-9999"' data-mask>
                         </div>
-                    </div> 
+                    </div>
                     <!-- /.input group -->
                     </>
                     <!-- /.form group -->
@@ -140,10 +140,10 @@
                     <button type="submit" class="btn btn-primary">Salvar</button>
                     <a href="/secretaria" class="btn btn-secondary">Cancelar</a>
                 </div>
-                </div>
-            </div> 
-        </form>
+            </div>
     </div>
+    </form>
+</div>
 </div>
 
 @stop
