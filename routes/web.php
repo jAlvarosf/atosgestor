@@ -35,6 +35,9 @@ Route::get('/financeiro/financeiro.painel', function () {
     return view('financeiro.painel');
 });
 
+Route::get('financeiro/receitas/receitas.create', function () {
+    return view('financeiro/receitas.create');
+});
 Route::get('financeiro/receitas/receitas.index', function () {
     return view('financeiro/receitas.index');
 });
