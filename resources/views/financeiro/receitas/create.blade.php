@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Cadastro')
+@section('title', 'Receita')
 
 @section('content_header')
 <h1>Cadastro</h1>
@@ -11,7 +11,7 @@
     <!-- Different Width -->
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">Novo Membro</h3>
+            <h3 class="card-title">Nova Receita</h3>
         </div>
 
         @if ($errors->any())

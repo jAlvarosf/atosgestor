@@ -10,26 +10,11 @@
 <div class="card">
   <div class="card-header">
     <h3 class="card-title">Receitas</h3>
-    <a class="btn btn-primary btn-sm" href="receitas/create" style="float: right; margin: 2px;">
+    <a class="btn btn-primary btn-sm" href="receitas.create" style="float: right; margin: 2px;">
       <i class="fas fa-folder">
       </i>
-      Renda
+      Nova Receita
     </a>
-    <a class="btn btn-primary btn-sm" href="receitas/create" style="float: right; margin: 2px;">
-      <i class="fas fa-folder">
-      </i>
-      Doação
-    </a>
-    <a class="btn btn-primary btn-sm" href="receitas/create" style="float: right; margin: 2px;" >
-        <i class="fas fa-folder">
-        </i>
-        Oferta
-      </a>
-      <a class="btn btn-primary btn-sm" href="receitas/create" style="float: right; margin: 2px;">
-        <i class="fas fa-folder">
-        </i>
-        Dizimo
-      </a>
   </div>
   <!-- /.card-header -->
   <div class="card-body">
@@ -37,15 +22,16 @@
       <thead>
         <tr>
           <th>Data</th>
-          <th>Nome</th>
-          <th>Nascido</th>
-          <th>Telefone</th>
+          <th>Descrição</th>
+          <th>Vinculo</th>
+          <th>Categoria</th>
+          <th>Valor</th>
           <th>Ações</th>
         </tr>
       </thead>
       <tbody>
-
         <tr>
+          <td></td>
           <td></td>
           <td></td>
           <td></td>
@@ -56,9 +42,6 @@
               <a class="btn btn-info btn-sm" href="">
                 <i class="fas fa-pencil-alt"></i>
               </a>
-
-              @csrf
-              @method('DELETE')
 
               <button type="submit" title="delete" class="btn btn-danger btn-sm ">
                 <i class="fas fa-trash"></i>
