@@ -43,12 +43,9 @@
             </div>
             <!-- /.col -->
 
-            <!-- fix for small devices only -->
-            <div class="clearfix hidden-md-up"></div>
-
             <div class="col-12 col-sm-6 col-md-4">
                 <div class="info-box mb-3">
-                    <span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
+                    <span class="info-box-icon bg-success elevation-3"><i class="fas fa-shopping-cart"></i></span>
 
                     <div class="info-box-content">
                         <span class="info-box-text">Total em Caixa</span>
