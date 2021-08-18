@@ -14,10 +14,11 @@
         <div class="row">
             <div class="col-12 col-sm-6 col-md-4">
                 <div class="info-box">
+
                     <span class="info-box-icon bg-info elevation-3"><i class="fas fa-arrow-up"></i></span>
 
                     <div class="info-box-content">
-                        <span class="info-box-text">Total de Entradas</span>
+                        <span class="info-box-text">Total de Entradas: <br>555</span>
                         <span class="info-box-number">
 
                         </span>
@@ -32,7 +33,7 @@
                     <span class="info-box-icon bg-danger elevation-3"><i class="fas fa-arrow-down"></i></span>
 
                     <div class="info-box-content">
-                        <span class="info-box-text">Total de Saidas</span>
+                        <span class="info-box-text">Total de Saida: <br>-777</span>
                         <span class="info-box-number">
 
                         </span>
@@ -48,7 +49,7 @@
                     <span class="info-box-icon bg-success elevation-3"><i class="fas fa-shopping-cart"></i></span>
 
                     <div class="info-box-content">
-                        <span class="info-box-text">Total em Caixa</span>
+                        <span class="info-box-text">Total em Caixa: <br>888</span>
                         <span class="info-box-number">
 
                         </span>
