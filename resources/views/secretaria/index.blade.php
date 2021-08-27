@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Lista de Usuários')
+@section('title', 'Lista de Usuários | SistemaAtos')
 
 @section('content_header')
 <h1>Secretaria</h1>
@@ -65,7 +65,7 @@
 
 @section('css')
 <!-- Theme style -->
-<link rel="stylesheet" href="/css/admin_custom.css"> 
+<link rel="stylesheet" href="/css/admin_custom.css">
 <!-- DataTables -->
 <link rel="stylesheet" href="{{asset('vendor/adminlte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css')}}">
 <link rel="stylesheet" href="{{asset('vendor/adminlte/plugins/datatables-buttons/css/buttons.bootstrap4.min.css')}}">

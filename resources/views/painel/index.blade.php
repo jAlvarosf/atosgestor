@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Painel Principal')
+@section('title', 'Painel Principal | SistemaAtos')
 
 @section('content_header')
 <h1>Painel Principal</h1>

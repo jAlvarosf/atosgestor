@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Editar')
+@section('title', 'Editar | SistemaAtos')
 
 @section('content_header')
 <h1>Editar</h1>
@@ -11,7 +11,8 @@
   <!-- Different Width -->
   <div class="card card-primary">
     <div class="card-header">
-      <h3 class="card-title">Editar Pessoa</h3>
+
+      <h3 class="card-title">Editando o usuário - {{ $pessoa->nome }}</h3>
     </div>
 
     @if ($errors->any())
