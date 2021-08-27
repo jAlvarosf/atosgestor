@@ -15,8 +15,8 @@ return [
     */
 
     'title' => 'SistemaAtos',
-    'title_prefix' => '',
-    'title_postfix' => '',
+    'title_prefix' => 'Sistema',
+    'title_postfix' => 'Atos',
 
     /*
     |--------------------------------------------------------------------------
@@ -31,7 +31,7 @@ return [
     */
 
     'use_ico_only' => false,
-    'use_full_favicon' => false,
+    'use_full_favicon' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -50,7 +50,7 @@ return [
     'logo_img_class' => 'brand-image img-circle elevation-2',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'AdminLTE',
+    'logo_img_alt' => '',
     /*
     |--------------------------------------------------------------------------
     | User Menu
@@ -84,7 +84,7 @@ return [
 
     'layout_topnav' => null,
     'layout_boxed' => null,
-    'layout_fixed_sidebar' => null,
+    'layout_fixed_sidebar' => true,
     'layout_fixed_navbar' => null,
     'layout_fixed_footer' => true,
 
