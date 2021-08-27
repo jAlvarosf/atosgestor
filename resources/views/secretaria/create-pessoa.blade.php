@@ -34,7 +34,7 @@
                     </div>
                     <!-- phone mask -->
                     <div class="col-4">
-                        <label>Telefone:</label>
+                        <label>Telefone: *</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-phone"></i></span>
@@ -57,7 +57,7 @@
                         <input id="foto" name="foto" type="file" class="custom-file-input">
                     </div> -->
                     <div class="col-4">
-                        <label>Nascimento:</label>
+                        <label>Nascimento: *</label>
                         <div class="input-group date" id="reservationdate" data-target-input="nearest">
                             <input name="dataNascimento" type="text" class="form-control datetimepicker-input" data-target="#reservationdate" />
                             <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">

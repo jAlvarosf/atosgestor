@@ -53,8 +53,8 @@
     </div>
     <!-- layout_fixed_footer -->
     <footer class="main-footer">
-        <strong>Copyright &copy; 2021 <a href="https://github.com/jAlvarosf">SitemaGestor | Alvaro Firmino</a>.</strong>
-        All rights reserved.
+        <strong>Copyright &copy; 2021 <a href="https://github.com/jAlvarosf">SitemaGestor | JAlvaroSF</a>.</strong>
+        todos diretos reservados.
         <div class="float-right d-none d-sm-inline-block">
             <b>Version</b> 1.0.0
         </div>
