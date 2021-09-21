@@ -113,7 +113,7 @@
                     <div class="col-4">
                         <label>Estado Cívil:</label>
                         <select name="estadocivil" class="select2 form-control custom-select">
-                            <optgroup label="estadocivil">
+                            <optgroup label="Opções">
                                 <option value="solteiro">Solteiro</option>
                                 <option value="casado">Casado</option>
                                 <option value="divorciado">Divorciado</option>
@@ -123,7 +123,7 @@
                     <div class="col-4">
                         <label>Estado do membro:</label>
                         <select name="estadoMem" class="select2 form-control custom-select">
-                            <optgroup label="estadoMem">
+                            <optgroup label="Opções">
                                 <option value="ativo">Ativo</option>
                                 <option value="inativo">Inativo</option>
                             </optgroup>
