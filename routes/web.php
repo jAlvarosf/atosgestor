@@ -24,28 +24,30 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/painel', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/secretaria/secretaria.painel', function () {
     return view('secretaria.painel');
 });
+Route::group(['auth:sanctum', 'verified'], function () {
 
-Route::middleware(['auth:sanctum', 'verified'])->resource('secretaria', SecretariaController::class);
+Route::resource('secretaria', SecretariaController::class);
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/secretaria/{$id}', [SecretariaController::class, 'edit']);
+Route::get('/secretaria/{$id}', [SecretariaController::class, 'edit']);
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/secretaria/{$id}', [SecretariaController::class, 'destroy']);
+Route::get('/secretaria/{$id}', [SecretariaController::class, 'destroy']);
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/financeiro/financeiro.painel', function () {
+Route::get('/financeiro/financeiro.painel', function () {
     return view('financeiro.painel');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('financeiro/receitas/receitas.create', function () {
+Route::get('financeiro/receitas/receitas.create', function () {
     return view('financeiro/receitas.create');
 });
-Route::middleware(['auth:sanctum', 'verified'])->get('financeiro/receitas/receitas.index', function () {
+Route::get('financeiro/receitas/receitas.index', function () {
     return view('financeiro/receitas.index');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('financeiro/despesas/despesas.index', function () {
+Route::get('financeiro/despesas/despesas.index', function () {
     return view('financeiro/despesas.index');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/financeiro/financeiro.extrato', function () {
+Route::get('/financeiro/financeiro.extrato', function () {
     return view('financeiro.extrato');
+});
 });
