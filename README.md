@@ -62,11 +62,12 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 ##  Instalation in 5 steps
-git clone https://github.com/jAlvarosf/atosgestor.git
-cd atosgestor
-composer install
-cp .env.example .env
-php artisan key:generate
+- git clone https://github.com/jAlvarosf/atosgestor.git
+- cd atosgestor
+- composer install
+- cp .env.example .env
+- php artisan key:generate
+
 # If you are user MySQL you can paste this to your .env file:
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
