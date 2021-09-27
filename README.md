@@ -11,7 +11,8 @@
 - git clone https://github.com/jAlvarosf/atosgestor.git
 - cd atosgestor
 - composer install
-- cp .env.example .env
+- cp .env.example
+- mude para .env
 - php artisan key:generate
 
 ## If you are user MySQL you can paste this to your .env file:
