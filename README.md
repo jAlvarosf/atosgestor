@@ -7,6 +7,27 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+##  Instalation in 5 steps
+- git clone https://github.com/jAlvarosf/atosgestor.git
+- cd atosgestor
+- composer install
+- cp .env.example .env
+- php artisan key:generate
+
+## If you are user MySQL you can paste this to your .env file:
+- DB_CONNECTION=mysql
+- DB_HOST=127.0.0.1
+- DB_PORT=3306
+- DB_DATABASE=atosgestordb
+- DB_USERNAME=root
+- DB_PASSWORD=
+
+## To create table in database
+- php artisan migrate
+
+## start server
+- php artisan serve
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
@@ -60,24 +81,3 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-
-##  Instalation in 5 steps
-- git clone https://github.com/jAlvarosf/atosgestor.git
-- cd atosgestor
-- composer install
-- cp .env.example .env
-- php artisan key:generate
-
-## If you are user MySQL you can paste this to your .env file:
-- DB_CONNECTION=mysql
-- DB_HOST=127.0.0.1
-- DB_PORT=3306
-- DB_DATABASE=atosgestordb
-- DB_USERNAME=root
-- DB_PASSWORD=
-
-## To create table in database
-- php artisan migrate
-
-## start server
-- php artisan serve
