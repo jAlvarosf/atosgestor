@@ -68,12 +68,16 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - cp .env.example .env
 - php artisan key:generate
 
-# If you are user MySQL you can paste this to your .env file:
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=atosgestordb
-DB_USERNAME=root
-DB_PASSWORD=
-# To create table in database
-php artisan migrate
+## If you are user MySQL you can paste this to your .env file:
+- DB_CONNECTION=mysql
+- DB_HOST=127.0.0.1
+- DB_PORT=3306
+- DB_DATABASE=atosgestordb
+- DB_USERNAME=root
+- DB_PASSWORD=
+
+## To create table in database
+- php artisan migrate
+
+## start server
+- php artisan serve
