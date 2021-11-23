@@ -17,22 +17,26 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/painel', function () {
-    return view('painel.index');
-})->name('Index');
-
-Route::middleware(['auth:sanctum', 'verified'])->get('/secretaria/secretaria.painel', function () {
-    return view('secretaria.painel');
-});
-
-
 Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
+
+    Route::get('/painel', function () {
+        return view('painel.index');
+    })->name('Index');
+
+    // Route::get('/profile/profile.show-2', function () {
+    //     return view('profile.show-2');
+    // });
+
+    Route::get('/secretaria/secretaria.painel', function () {
+        return view('secretaria.painel');
+    });
 
     Route::resource('secretaria', SecretariaController::class);
 
     Route::get('/secretaria/{$id}', [SecretariaController::class, 'edit']);
 
     Route::get('/secretaria/{$id}', [SecretariaController::class, 'destroy']);
+
 
     Route::get('/financeiro/financeiro.painel', function () {
         return view('financeiro.painel');
