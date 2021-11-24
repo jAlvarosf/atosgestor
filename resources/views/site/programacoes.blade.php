@@ -37,7 +37,7 @@
         <section id="header" class="wrapper">
 
             <div class="video-container">
-                <video src="{{asset('site/images/vid-1.mp4')}}?" id="video-slider" loop autoplay muted></video>
+                <video src="{{asset('site/images/vid-programacao.mp4')}}?" id="video-slider" loop autoplay muted></video>
             </div>
 
             <!-- Logo -->
@@ -244,8 +244,9 @@
                 </div>
                 <div id="copyright">
                     <ul>
-                        <li>&copy; Untitled.</li>
-                        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                        <li>&copy; Untitled. 2021</li>
+                        <li>Design e creditos: <a href="http://html5up.net">HTML5 UP</a></li>
+                        <li>Desenvolvido: <a href="#">Alvaro Firmino</a></li>
                     </ul>
                 </div>
             </div>

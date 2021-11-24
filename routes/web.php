@@ -25,6 +25,7 @@ Route::get('/site/noticias', function () {
 Route::get('/site/programacoes', function () {
     return view('site/programacoes');
 });
+
 Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
 
     Route::get('/painel', function () {
