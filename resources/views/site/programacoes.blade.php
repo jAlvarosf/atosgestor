@@ -53,7 +53,7 @@
                         <a href="/"><i class="fas fa-church"></i> Home </a>
                     </li>
                     <li>
-                        <a href="/historia"> Historia </a>
+                        <a href="/site/historia"> Historia </a>
                     </li>
                     <li>
                         <a href="/site/noticias"> Noticias </a>
