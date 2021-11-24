@@ -16,7 +16,15 @@ use App\Http\Controllers\SecretariaController;
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/site/historia', function () {
+    return view('site/historia');
+});
+Route::get('/site/noticias', function () {
+    return view('site/noticias');
+});
+Route::get('/site/programacoes', function () {
+    return view('site/programacoes');
+});
 Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
 
     Route::get('/painel', function () {

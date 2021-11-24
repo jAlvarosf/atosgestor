@@ -36,6 +36,10 @@
         <!-- Header -->
         <section id="header" class="wrapper">
 
+            <div class="video-container">
+                <video src="{{asset('site/images/vid-1.mp4')}}?" id="video-slider" loop autoplay muted></video>
+            </div>
+
             <!-- Logo -->
             <div id="logo">
                 <h1><a href="/login">Sistema-Atos</a></h1>
@@ -49,16 +53,16 @@
                         <a href="/"><i class="fas fa-church"></i> Home </a>
                     </li>
                     <li>
-                        <a href="historia">Historia</a>
+                        <a href="/site/historia"> Historia </a>
                     </li>
                     <li>
-                        <a href="noticias">Noticias</a>
+                        <a href="/site/noticias"> Noticias </a>
                     </li>
                     <li>
-                        <a href="programacoes">Programaçôes</a>
+                        <a href="/site/programacoes"> Programaçôes </a>
                     </li>
                     <li>
-                        <a href="login">Login</a>
+                        <a href="login"> Login <i class="fas fa-user"></i></a>
                     </li>
                 </ul>
             </nav>
@@ -70,7 +74,7 @@
             <div class="title">Introdução</div>
             <div class="container">
                 <p class="style1">Então, caso você esteja se perguntando do que se trata ...</p>
-                <p class="style2">O SITEMA-ATOS é voltado para <br class="mobile-hide" />
+                <p class="style2">O SISTEMA-ATOS é voltado para <br class="mobile-hide" />
                     gestão de igrejas on-line da ATOSGESTOR
                 </p>
                 <!-- &ndash; usado para colocar um " - " -->
@@ -78,8 +82,8 @@
                     , desenvolvido por <a href="https://github.com/jAlvarosf">Jose Alvaro</a>, gerencie igrejas com
                     praticidade e dinamismo, que Deus sempre nos abençoe em tudo.</p>
                 <ul class="actions">
-          <li><a href="/login" class="button style3 large">Acessar</a></li>
-        </ul>
+                    <li><a href="/login" class="button style2 large">Acessar</a></li>
+                </ul>
             </div>
         </section>
 
