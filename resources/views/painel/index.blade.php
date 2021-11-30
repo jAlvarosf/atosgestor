@@ -15,7 +15,7 @@
                 <div class="info-box">
                     <span class="info-box-icon bg-info elevation-3"><i class="fas fa-arrow-up"></i></span>
                     <div class="info-box-content">
-                        <span class="info-box-text">Total de Entradas: <br>555</span>
+                        <span class="info-box-text">Entradas: <br>555</span>
                         <span class="info-box-number">
                         </span>
                     </div>
@@ -28,7 +28,7 @@
                 <div class="info-box mb-3">
                     <span class="info-box-icon bg-danger elevation-3"><i class="fas fa-arrow-down"></i></span>
                     <div class="info-box-content">
-                        <span class="info-box-text">Total de Saida: <br>-777</span>
+                        <span class="info-box-text">Saidas: <br>-777</span>
                         <span class="info-box-number">
                         </span>
                     </div>
@@ -41,7 +41,7 @@
                 <div class="info-box mb-3">
                     <span class="info-box-icon bg-success elevation-3"><i class="fas fa-shopping-cart"></i></span>
                     <div class="info-box-content">
-                        <span class="info-box-text">Total em Caixa: <br>888</span>
+                        <span class="info-box-text">Caixa: <br>888</span>
                         <span class="info-box-number">
                         </span>
                     </div>
@@ -124,7 +124,7 @@
         <!-- /.row -->
         <div class="row">
             <div class="col-12 col-sm-6 col-md-6">
-                <div class="card">
+                <div class="card collapsed-card">
                     <div class="card-header">
                         <h3 class="card-title">Aniversariantes</h3>
                         <!-- card tools -->
@@ -133,7 +133,7 @@
                                 <i class="far fa-calendar-alt"></i>
                             </button>
                             <button type="button" class="btn btn-primary btn-sm" data-card-widget="collapse" title="Collapse">
-                                <i class="fas fa-minus"></i>
+                                <i class="fas fa-plus"></i>
                             </button>
                         </div>
                         <!-- /.card-tools -->
@@ -164,16 +164,16 @@
                 <!-- /.card -->
             </div>
             <div class="col-12 col-sm-6 col-md-6">
-                <div class="card">
+                <div class="card collapsed-card">
                     <div class="card-header">
-                        <h3 class="card-title">aniversario de casamento</h3>
+                        <h3 class="card-title">Aniversarios de casamento</h3>
                         <!-- card tools -->
                         <div class="card-tools">
                             <button type="button" class="btn btn-primary btn-sm daterange" title="Date range">
                                 <i class="far fa-calendar-alt"></i>
                             </button>
                             <button type="button" class="btn btn-primary btn-sm" data-card-widget="collapse" title="Collapse">
-                                <i class="fas fa-minus"></i>
+                                <i class="fas fa-plus"></i>
                             </button>
                         </div>
                         <!-- /.card-tools -->
@@ -229,9 +229,9 @@
                     <button type="button" class="btn btn-success btn-sm" data-card-widget="collapse">
                         <i class="fas fa-minus"></i>
                     </button>
-                    <button type="button" class="btn btn-success btn-sm" data-card-widget="remove">
+                    <!-- <button type="button" class="btn btn-success btn-sm" data-card-widget="remove">
                         <i class="fas fa-times"></i>
-                    </button>
+                    </button> -->
                 </div>
                 <!-- /. tools -->
             </div>
@@ -302,16 +302,7 @@
 <script src="{{asset('vendor/adminlte/plugins/summernote/summernote-bs4.min.js')}}"></script>
 <!-- overlayScrollbars -->
 <script src="{{asset('vendor/adminlte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
-<!-- AdminLTE App -->
-<script src="{{asset('vendor/adminlte/dist/js/adminlte.js')}}"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <!-- jQuery -->
 <script src="{{asset('vendor/adminlte/plugins/jquery/jquery.min.js')}}"></script>
 <!-- OPTIONAL SCRIPTS -->
-<script src="{{asset('vendor/adminlte/plugins/chart.js/Chart.min.js')}}"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="{{asset('vendor/adminlte/dist/js/demo.js')}}"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="{{asset('vendor/adminlte/dist/js/dashboard3.js')}}"></script>
-<!-- Page specific script -->
 @stop
